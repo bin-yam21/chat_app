@@ -1,0 +1,846 @@
+{"$message_type":"diagnostic","message":"unused import: `user::User`","code":{"code":"unused_imports","explanation":null},"level":"warning","spans":[{"file_name":"src\\models\\mod.rs","byte_start":79,"byte_end":89,"line_start":6,"line_end":6,"column_start":9,"column_end":19,"is_primary":true,"text":[{"text":"pub use user::User;","highlight_start":9,"highlight_end":19}],"label":null,"suggested_replacement":null,"suggestion_applicability":null,"expansion":null}],"children":[{"message":"`#[warn(unused_imports)]` on by default","code":null,"level":"note","spans":[],"children":[],"rendered":null},{"message":"remove the whole `use` item","code":null,"level":"help","spans":[{"file_name":"src\\models\\mod.rs","byte_start":71,"byte_end":92,"line_start":6,"line_end":7,"column_start":1,"column_end":1,"is_primary":true,"text":[{"text":"pub use user::User;","highlight_start":1,"highlight_end":20},{"text":"pub use room::Room;","highlight_start":1,"highlight_end":1}],"label":null,"suggested_replacement":"","suggestion_applicability":"MachineApplicable","expansion":null}],"children":[],"rendered":null}],"rendered":"\u001b[0m\u001b[1m\u001b[38;5;11mwarning\u001b[0m\u001b[0m\u001b[1m\u001b[38;5;15m: unused import: `user::User`\u001b[0m\n\u001b[0m \u001b[0m\u001b[0m\u001b[1m\u001b[38;5;14m--> \u001b[0m\u001b[0msrc\\models\\mod.rs:6:9\u001b[0m\n\u001b[0m  \u001b[0m\u001b[0m\u001b[1m\u001b[38;5;14m|\u001b[0m\n\u001b[0m\u001b[1m\u001b[38;5;14m6\u001b[0m\u001b[0m \u001b[0m\u001b[0m\u001b[1m\u001b[38;5;14m|\u001b[0m\u001b[0m \u001b[0m\u001b[0mpub use user::User;\u001b[0m\n\u001b[0m  \u001b[0m\u001b[0m\u001b[1m\u001b[38;5;14m|\u001b[0m\u001b[0m         \u001b[0m\u001b[0m\u001b[1m\u001b[38;5;11m^^^^^^^^^^\u001b[0m\n\u001b[0m  \u001b[0m\u001b[0m\u001b[1m\u001b[38;5;14m|\u001b[0m\n\u001b[0m  \u001b[0m\u001b[0m\u001b[1m\u001b[38;5;14m= \u001b[0m\u001b[0m\u001b[1m\u001b[38;5;15mnote\u001b[0m\u001b[0m: `#[warn(unused_imports)]` on by default\u001b[0m\n\n"}
+{"$message_type":"diagnostic","message":"unused import: `room::Room`","code":{"code":"unused_imports","explanation":null},"level":"warning","spans":[{"file_name":"src\\models\\mod.rs","byte_start":100,"byte_end":110,"line_start":7,"line_end":7,"column_start":9,"column_end":19,"is_primary":true,"text":[{"text":"pub use room::Room;","highlight_start":9,"highlight_end":19}],"label":null,"suggested_replacement":null,"suggestion_applicability":null,"expansion":null}],"children":[{"message":"remove the whole `use` item","code":null,"level":"help","spans":[{"file_name":"src\\models\\mod.rs","byte_start":92,"byte_end":113,"line_start":7,"line_end":8,"column_start":1,"column_end":1,"is_primary":true,"text":[{"text":"pub use room::Room;","highlight_start":1,"highlight_end":20},{"text":"pub use message::Message;","highlight_start":1,"highlight_end":1}],"label":null,"suggested_replacement":"","suggestion_applicability":"MachineApplicable","expansion":null}],"children":[],"rendered":null}],"rendered":"\u001b[0m\u001b[1m\u001b[38;5;11mwarning\u001b[0m\u001b[0m\u001b[1m\u001b[38;5;15m: unused import: `room::Room`\u001b[0m\n\u001b[0m \u001b[0m\u001b[0m\u001b[1m\u001b[38;5;14m--> \u001b[0m\u001b[0msrc\\models\\mod.rs:7:9\u001b[0m\n\u001b[0m  \u001b[0m\u001b[0m\u001b[1m\u001b[38;5;14m|\u001b[0m\n\u001b[0m\u001b[1m\u001b[38;5;14m7\u001b[0m\u001b[0m \u001b[0m\u001b[0m\u001b[1m\u001b[38;5;14m|\u001b[0m\u001b[0m \u001b[0m\u001b[0mpub use room::Room;\u001b[0m\n\u001b[0m  \u001b[0m\u001b[0m\u001b[1m\u001b[38;5;14m|\u001b[0m\u001b[0m         \u001b[0m\u001b[0m\u001b[1m\u001b[38;5;11m^^^^^^^^^^\u001b[0m\n\n"}
+{"$message_type":"diagnostic","message":"unused import: `message::Message`","code":{"code":"unused_imports","explanation":null},"level":"warning","spans":[{"file_name":"src\\models\\mod.rs","byte_start":121,"byte_end":137,"line_start":8,"line_end":8,"column_start":9,"column_end":25,"is_primary":true,"text":[{"text":"pub use message::Message;","highlight_start":9,"highlight_end":25}],"label":null,"suggested_replacement":null,"suggestion_applicability":null,"expansion":null}],"children":[{"message":"remove the whole `use` item","code":null,"level":"help","spans":[{"file_name":"src\\models\\mod.rs","byte_start":113,"byte_end":140,"line_start":8,"line_end":9,"column_start":1,"column_end":1,"is_primary":true,"text":[{"text":"pub use message::Message;","highlight_start":1,"highlight_end":26},{"text":"pub use attachment::Attachment;","highlight_start":1,"highlight_end":1}],"label":null,"suggested_replacement":"","suggestion_applicability":"MachineApplicable","expansion":null}],"children":[],"rendered":null}],"rendered":"\u001b[0m\u001b[1m\u001b[38;5;11mwarning\u001b[0m\u001b[0m\u001b[1m\u001b[38;5;15m: unused import: `message::Message`\u001b[0m\n\u001b[0m \u001b[0m\u001b[0m\u001b[1m\u001b[38;5;14m--> \u001b[0m\u001b[0msrc\\models\\mod.rs:8:9\u001b[0m\n\u001b[0m  \u001b[0m\u001b[0m\u001b[1m\u001b[38;5;14m|\u001b[0m\n\u001b[0m\u001b[1m\u001b[38;5;14m8\u001b[0m\u001b[0m \u001b[0m\u001b[0m\u001b[1m\u001b[38;5;14m|\u001b[0m\u001b[0m \u001b[0m\u001b[0mpub use message::Message;\u001b[0m\n\u001b[0m  \u001b[0m\u001b[0m\u001b[1m\u001b[38;5;14m|\u001b[0m\u001b[0m         \u001b[0m\u001b[0m\u001b[1m\u001b[38;5;11m^^^^^^^^^^^^^^^^\u001b[0m\n\n"}
+{"$message_type":"diagnostic","message":"unused import: `attachment::Attachment`","code":{"code":"unused_imports","explanation":null},"level":"warning","spans":[{"file_name":"src\\models\\mod.rs","byte_start":148,"byte_end":170,"line_start":9,"line_end":9,"column_start":9,"column_end":31,"is_primary":true,"text":[{"text":"pub use attachment::Attachment;","highlight_start":9,"highlight_end":31}],"label":null,"suggested_replacement":null,"suggestion_applicability":null,"expansion":null}],"children":[{"message":"remove the whole `use` item","code":null,"level":"help","spans":[{"file_name":"src\\models\\mod.rs","byte_start":140,"byte_end":173,"line_start":9,"line_end":9,"column_start":1,"column_end":33,"is_primary":true,"text":[{"text":"pub use attachment::Attachment;","highlight_start":1,"highlight_end":33}],"label":null,"suggested_replacement":"","suggestion_applicability":"MachineApplicable","expansion":null}],"children":[],"rendered":null}],"rendered":"\u001b[0m\u001b[1m\u001b[38;5;11mwarning\u001b[0m\u001b[0m\u001b[1m\u001b[38;5;15m: unused import: `attachment::Attachment`\u001b[0m\n\u001b[0m \u001b[0m\u001b[0m\u001b[1m\u001b[38;5;14m--> \u001b[0m\u001b[0msrc\\models\\mod.rs:9:9\u001b[0m\n\u001b[0m  \u001b[0m\u001b[0m\u001b[1m\u001b[38;5;14m|\u001b[0m\n\u001b[0m\u001b[1m\u001b[38;5;14m9\u001b[0m\u001b[0m \u001b[0m\u001b[0m\u001b[1m\u001b[38;5;14m|\u001b[0m\u001b[0m \u001b[0m\u001b[0mpub use attachment::Attachment;\u001b[0m\n\u001b[0m  \u001b[0m\u001b[0m\u001b[1m\u001b[38;5;14m|\u001b[0m\u001b[0m         \u001b[0m\u001b[0m\u001b[1m\u001b[38;5;11m^^^^^^^^^^^^^^^^^^^^^^\u001b[0m\n\n"}
+{"$message_type":"diagnostic","message":"unused import: `axum::extract::State`","code":{"code":"unused_imports","explanation":null},"level":"warning","spans":[{"file_name":"src\\routes\\mod.rs","byte_start":51,"byte_end":71,"line_start":6,"line_end":6,"column_start":5,"column_end":25,"is_primary":true,"text":[{"text":"use axum::extract::State;","highlight_start":5,"highlight_end":25}],"label":null,"suggested_replacement":null,"suggestion_applicability":null,"expansion":null}],"children":[{"message":"remove the whole `use` item","code":null,"level":"help","spans":[{"file_name":"src\\routes\\mod.rs","byte_start":47,"byte_end":74,"line_start":6,"line_end":7,"column_start":1,"column_end":1,"is_primary":true,"text":[{"text":"use axum::extract::State;","highlight_start":1,"highlight_end":26},{"text":"use sqlx::{Pool, Postgres};","highlight_start":1,"highlight_end":1}],"label":null,"suggested_replacement":"","suggestion_applicability":"MachineApplicable","expansion":null}],"children":[],"rendered":null}],"rendered":"\u001b[0m\u001b[1m\u001b[38;5;11mwarning\u001b[0m\u001b[0m\u001b[1m\u001b[38;5;15m: unused import: `axum::extract::State`\u001b[0m\n\u001b[0m \u001b[0m\u001b[0m\u001b[1m\u001b[38;5;14m--> \u001b[0m\u001b[0msrc\\routes\\mod.rs:6:5\u001b[0m\n\u001b[0m  \u001b[0m\u001b[0m\u001b[1m\u001b[38;5;14m|\u001b[0m\n\u001b[0m\u001b[1m\u001b[38;5;14m6\u001b[0m\u001b[0m \u001b[0m\u001b[0m\u001b[1m\u001b[38;5;14m|\u001b[0m\u001b[0m \u001b[0m\u001b[0muse axum::extract::State;\u001b[0m\n\u001b[0m  \u001b[0m\u001b[0m\u001b[1m\u001b[38;5;14m|\u001b[0m\u001b[0m     \u001b[0m\u001b[0m\u001b[1m\u001b[38;5;11m^^^^^^^^^^^^^^^^^^^^\u001b[0m\n\n"}
+2025-10-20T12:23:14.873Z INFO  [rustowlc::core] start borrowck of DefId(0:10 ~ chat_app[883d]::db::init_db)
+2025-10-20T12:23:14.874Z INFO  [rustowlc::core] start borrowck of DefId(0:12 ~ chat_app[883d]::db::init_db::{closure#0})
+2025-10-20T12:23:14.885Z INFO  [rustowlc::core::analyze] facts of DefId(0:12 ~ chat_app[883d]::db::init_db::{closure#0}) prepared; start analyze of DefId(0:12 ~ chat_app[883d]::db::init_db::{closure#0})
+2025-10-20T12:23:14.886Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:14.886Z INFO  [rustowlc::core] borrow checked: 1 / 140
+2025-10-20T12:23:14.886Z INFO  [rustowlc::core::analyze] facts of DefId(0:10 ~ chat_app[883d]::db::init_db) prepared; start analyze of DefId(0:10 ~ chat_app[883d]::db::init_db)
+2025-10-20T12:23:14.886Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:14.887Z INFO  [rustowlc::core] borrow checked: 2 / 140
+2025-10-20T12:23:14.887Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:14.900Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:14.905Z INFO  [rustowlc::core] start borrowck of DefId(0:40 ~ chat_app[883d]::handlers::user_handler::get_users)
+2025-10-20T12:23:14.905Z INFO  [rustowlc::core] start borrowck of DefId(0:43 ~ chat_app[883d]::handlers::user_handler::get_users::{closure#0})
+2025-10-20T12:23:14.908Z INFO  [rustowlc::core] start borrowck of DefId(0:276 ~ chat_app[883d]::handlers::user_handler::get_users::{closure#0}::{closure#0})
+2025-10-20T12:23:14.917Z INFO  [rustowlc::core::analyze] facts of DefId(0:276 ~ chat_app[883d]::handlers::user_handler::get_users::{closure#0}::{closure#0}) prepared; start analyze of DefId(0:276 ~ chat_app[883d]::handlers::user_handler::get_users::{closure#0}::{closure#0})
+2025-10-20T12:23:14.945Z INFO  [rustowlc::core] borrow checked: 3 / 140
+2025-10-20T12:23:14.945Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:14.968Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:15.126Z INFO  [rustowlc::core::analyze] facts of DefId(0:43 ~ chat_app[883d]::handlers::user_handler::get_users::{closure#0}) prepared; start analyze of DefId(0:43 ~ chat_app[883d]::handlers::user_handler::get_users::{closure#0})
+2025-10-20T12:23:15.133Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:15.133Z INFO  [rustowlc::core] borrow checked: 4 / 140
+2025-10-20T12:23:15.134Z INFO  [rustowlc::core::analyze] facts of DefId(0:40 ~ chat_app[883d]::handlers::user_handler::get_users) prepared; start analyze of DefId(0:40 ~ chat_app[883d]::handlers::user_handler::get_users)
+2025-10-20T12:23:15.134Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:15.134Z INFO  [rustowlc::core] borrow checked: 5 / 140
+2025-10-20T12:23:15.134Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:15.142Z INFO  [rustowlc::core] start borrowck of DefId(0:44 ~ chat_app[883d]::handlers::user_handler::create_user)
+2025-10-20T12:23:15.142Z INFO  [rustowlc::core] start borrowck of DefId(0:47 ~ chat_app[883d]::handlers::user_handler::create_user::{closure#0})
+2025-10-20T12:23:15.146Z INFO  [rustowlc::core] start borrowck of DefId(0:290 ~ chat_app[883d]::handlers::user_handler::create_user::{closure#0}::{closure#0})
+2025-10-20T12:23:15.156Z INFO  [rustowlc::core::analyze] facts of DefId(0:290 ~ chat_app[883d]::handlers::user_handler::create_user::{closure#0}::{closure#0}) prepared; start analyze of DefId(0:290 ~ chat_app[883d]::handlers::user_handler::create_user::{closure#0}::{closure#0})
+2025-10-20T12:23:15.194Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:15.194Z INFO  [rustowlc::core] borrow checked: 6 / 140
+2025-10-20T12:23:15.196Z INFO  [rustowlc::core] start borrowck of DefId(0:304 ~ chat_app[883d]::handlers::user_handler::create_user::{closure#0}::{closure#1})
+2025-10-20T12:23:15.207Z INFO  [rustowlc::core::analyze] facts of DefId(0:304 ~ chat_app[883d]::handlers::user_handler::create_user::{closure#0}::{closure#1}) prepared; start analyze of DefId(0:304 ~ chat_app[883d]::handlers::user_handler::create_user::{closure#0}::{closure#1})
+2025-10-20T12:23:15.217Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:15.241Z INFO  [rustowlc::core] borrow checked: 7 / 140
+2025-10-20T12:23:15.241Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:15.266Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:15.507Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:15.966Z INFO  [rustowlc::core::analyze] facts of DefId(0:47 ~ chat_app[883d]::handlers::user_handler::create_user::{closure#0}) prepared; start analyze of DefId(0:47 ~ chat_app[883d]::handlers::user_handler::create_user::{closure#0})
+2025-10-20T12:23:15.979Z INFO  [rustowlc::core] borrow checked: 8 / 140
+2025-10-20T12:23:15.979Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:15.980Z INFO  [rustowlc::core::analyze] facts of DefId(0:44 ~ chat_app[883d]::handlers::user_handler::create_user) prepared; start analyze of DefId(0:44 ~ chat_app[883d]::handlers::user_handler::create_user)
+2025-10-20T12:23:15.980Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:15.980Z INFO  [rustowlc::core] borrow checked: 9 / 140
+2025-10-20T12:23:15.980Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:15.996Z INFO  [rustowlc::core] start borrowck of DefId(0:48 ~ chat_app[883d]::handlers::user_handler::login)
+2025-10-20T12:23:15.997Z INFO  [rustowlc::core] start borrowck of DefId(0:51 ~ chat_app[883d]::handlers::user_handler::login::{closure#0})
+2025-10-20T12:23:16.002Z INFO  [rustowlc::core] start borrowck of DefId(0:318 ~ chat_app[883d]::handlers::user_handler::login::{closure#0}::{closure#0})
+2025-10-20T12:23:16.015Z INFO  [rustowlc::core::analyze] facts of DefId(0:318 ~ chat_app[883d]::handlers::user_handler::login::{closure#0}::{closure#0}) prepared; start analyze of DefId(0:318 ~ chat_app[883d]::handlers::user_handler::login::{closure#0}::{closure#0})
+2025-10-20T12:23:16.063Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:16.063Z INFO  [rustowlc::core] borrow checked: 10 / 140
+2025-10-20T12:23:16.064Z INFO  [rustowlc::core] start borrowck of DefId(0:332 ~ chat_app[883d]::handlers::user_handler::login::{closure#0}::{closure#1})
+2025-10-20T12:23:16.079Z INFO  [rustowlc::core::analyze] facts of DefId(0:332 ~ chat_app[883d]::handlers::user_handler::login::{closure#0}::{closure#1}) prepared; start analyze of DefId(0:332 ~ chat_app[883d]::handlers::user_handler::login::{closure#0}::{closure#1})
+2025-10-20T12:23:16.086Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:16.125Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:16.125Z INFO  [rustowlc::core] borrow checked: 11 / 140
+2025-10-20T12:23:16.126Z INFO  [rustowlc::core] start borrowck of DefId(0:346 ~ chat_app[883d]::handlers::user_handler::login::{closure#0}::{closure#2})
+2025-10-20T12:23:16.141Z INFO  [rustowlc::core::analyze] facts of DefId(0:346 ~ chat_app[883d]::handlers::user_handler::login::{closure#0}::{closure#2}) prepared; start analyze of DefId(0:346 ~ chat_app[883d]::handlers::user_handler::login::{closure#0}::{closure#2})
+2025-10-20T12:23:16.149Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:16.178Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:16.178Z INFO  [rustowlc::core] borrow checked: 12 / 140
+2025-10-20T12:23:16.180Z INFO  [rustowlc::core] start borrowck of DefId(0:360 ~ chat_app[883d]::handlers::user_handler::login::{closure#0}::{closure#3})
+2025-10-20T12:23:16.193Z INFO  [rustowlc::core::analyze] facts of DefId(0:360 ~ chat_app[883d]::handlers::user_handler::login::{closure#0}::{closure#3}) prepared; start analyze of DefId(0:360 ~ chat_app[883d]::handlers::user_handler::login::{closure#0}::{closure#3})
+2025-10-20T12:23:16.201Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:16.226Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:16.226Z INFO  [rustowlc::core] borrow checked: 13 / 140
+2025-10-20T12:23:16.249Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:17.503Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.218Z INFO  [rustowlc::core::analyze] facts of DefId(0:51 ~ chat_app[883d]::handlers::user_handler::login::{closure#0}) prepared; start analyze of DefId(0:51 ~ chat_app[883d]::handlers::user_handler::login::{closure#0})
+2025-10-20T12:23:19.247Z INFO  [rustowlc::core] borrow checked: 14 / 140
+2025-10-20T12:23:19.248Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.248Z INFO  [rustowlc::core::analyze] facts of DefId(0:48 ~ chat_app[883d]::handlers::user_handler::login) prepared; start analyze of DefId(0:48 ~ chat_app[883d]::handlers::user_handler::login)
+2025-10-20T12:23:19.248Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.248Z INFO  [rustowlc::core] borrow checked: 15 / 140
+2025-10-20T12:23:19.248Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.252Z INFO  [rustowlc::core] start borrowck of DefId(0:61 ~ chat_app[883d]::repository::user_repository::{impl#0}::create_user)
+2025-10-20T12:23:19.252Z INFO  [rustowlc::core] start borrowck of DefId(0:63 ~ chat_app[883d]::repository::user_repository::{impl#0}::create_user::{closure#0})
+2025-10-20T12:23:19.262Z INFO  [rustowlc::core::analyze] facts of DefId(0:63 ~ chat_app[883d]::repository::user_repository::{impl#0}::create_user::{closure#0}) prepared; start analyze of DefId(0:63 ~ chat_app[883d]::repository::user_repository::{impl#0}::create_user::{closure#0})
+2025-10-20T12:23:19.262Z INFO  [rustowlc::core] borrow checked: 16 / 140
+2025-10-20T12:23:19.262Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.263Z INFO  [rustowlc::core::analyze] facts of DefId(0:61 ~ chat_app[883d]::repository::user_repository::{impl#0}::create_user) prepared; start analyze of DefId(0:61 ~ chat_app[883d]::repository::user_repository::{impl#0}::create_user)
+2025-10-20T12:23:19.263Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.263Z INFO  [rustowlc::core] borrow checked: 17 / 140
+2025-10-20T12:23:19.263Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.264Z INFO  [rustowlc::core] start borrowck of DefId(0:64 ~ chat_app[883d]::repository::user_repository::{impl#0}::find_by_username)
+2025-10-20T12:23:19.265Z INFO  [rustowlc::core] start borrowck of DefId(0:66 ~ chat_app[883d]::repository::user_repository::{impl#0}::find_by_username::{closure#0})
+2025-10-20T12:23:19.274Z INFO  [rustowlc::core::analyze] facts of DefId(0:66 ~ chat_app[883d]::repository::user_repository::{impl#0}::find_by_username::{closure#0}) prepared; start analyze of DefId(0:66 ~ chat_app[883d]::repository::user_repository::{impl#0}::find_by_username::{closure#0})
+2025-10-20T12:23:19.275Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.275Z INFO  [rustowlc::core] borrow checked: 18 / 140
+2025-10-20T12:23:19.275Z INFO  [rustowlc::core::analyze] facts of DefId(0:64 ~ chat_app[883d]::repository::user_repository::{impl#0}::find_by_username) prepared; start analyze of DefId(0:64 ~ chat_app[883d]::repository::user_repository::{impl#0}::find_by_username)
+2025-10-20T12:23:19.275Z INFO  [rustowlc::core] borrow checked: 19 / 140
+2025-10-20T12:23:19.275Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.275Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.277Z INFO  [rustowlc::core] start borrowck of DefId(0:67 ~ chat_app[883d]::repository::user_repository::{impl#0}::get_all)
+2025-10-20T12:23:19.277Z INFO  [rustowlc::core] start borrowck of DefId(0:69 ~ chat_app[883d]::repository::user_repository::{impl#0}::get_all::{closure#0})
+2025-10-20T12:23:19.285Z INFO  [rustowlc::core::analyze] facts of DefId(0:69 ~ chat_app[883d]::repository::user_repository::{impl#0}::get_all::{closure#0}) prepared; start analyze of DefId(0:69 ~ chat_app[883d]::repository::user_repository::{impl#0}::get_all::{closure#0})
+2025-10-20T12:23:19.286Z INFO  [rustowlc::core] borrow checked: 20 / 140
+2025-10-20T12:23:19.286Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.286Z INFO  [rustowlc::core::analyze] facts of DefId(0:67 ~ chat_app[883d]::repository::user_repository::{impl#0}::get_all) prepared; start analyze of DefId(0:67 ~ chat_app[883d]::repository::user_repository::{impl#0}::get_all)
+2025-10-20T12:23:19.286Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.286Z INFO  [rustowlc::core] borrow checked: 21 / 140
+2025-10-20T12:23:19.286Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.288Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.293Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.300Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.301Z INFO  [rustowlc::core] start borrowck of DefId(0:128 ~ chat_app[883d]::handlers::user_handler::_)
+2025-10-20T12:23:19.302Z INFO  [rustowlc::core::analyze] facts of DefId(0:128 ~ chat_app[883d]::handlers::user_handler::_) prepared; start analyze of DefId(0:128 ~ chat_app[883d]::handlers::user_handler::_)
+2025-10-20T12:23:19.302Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.302Z INFO  [rustowlc::core] borrow checked: 22 / 140
+2025-10-20T12:23:19.302Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.302Z INFO  [rustowlc::core] start borrowck of DefId(0:171 ~ chat_app[883d]::handlers::user_handler::_::{impl#0}::deserialize::FIELDS)
+2025-10-20T12:23:19.303Z INFO  [rustowlc::core::analyze] facts of DefId(0:171 ~ chat_app[883d]::handlers::user_handler::_::{impl#0}::deserialize::FIELDS) prepared; start analyze of DefId(0:171 ~ chat_app[883d]::handlers::user_handler::_::{impl#0}::deserialize::FIELDS)
+2025-10-20T12:23:19.303Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.303Z INFO  [rustowlc::core] borrow checked: 23 / 140
+2025-10-20T12:23:19.303Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.304Z INFO  [rustowlc::core] start borrowck of DefId(0:175 ~ chat_app[883d]::handlers::user_handler::_#1)
+2025-10-20T12:23:19.305Z INFO  [rustowlc::core::analyze] facts of DefId(0:175 ~ chat_app[883d]::handlers::user_handler::_#1) prepared; start analyze of DefId(0:175 ~ chat_app[883d]::handlers::user_handler::_#1)
+2025-10-20T12:23:19.305Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.305Z INFO  [rustowlc::core] borrow checked: 24 / 140
+2025-10-20T12:23:19.305Z INFO  [rustowlc::core] start borrowck of DefId(0:216 ~ chat_app[883d]::handlers::user_handler::_#1::{impl#0}::deserialize::FIELDS)
+2025-10-20T12:23:19.305Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.306Z INFO  [rustowlc::core::analyze] facts of DefId(0:216 ~ chat_app[883d]::handlers::user_handler::_#1::{impl#0}::deserialize::FIELDS) prepared; start analyze of DefId(0:216 ~ chat_app[883d]::handlers::user_handler::_#1::{impl#0}::deserialize::FIELDS)
+2025-10-20T12:23:19.306Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.306Z INFO  [rustowlc::core] borrow checked: 25 / 140
+2025-10-20T12:23:19.306Z INFO  [rustowlc::core] start borrowck of DefId(0:219 ~ chat_app[883d]::handlers::user_handler::_#2)
+2025-10-20T12:23:19.307Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.307Z INFO  [rustowlc::core::analyze] facts of DefId(0:219 ~ chat_app[883d]::handlers::user_handler::_#2) prepared; start analyze of DefId(0:219 ~ chat_app[883d]::handlers::user_handler::_#2)
+2025-10-20T12:23:19.307Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.307Z INFO  [rustowlc::core] borrow checked: 26 / 140
+2025-10-20T12:23:19.307Z INFO  [rustowlc::core] start borrowck of DefId(0:227 ~ chat_app[883d]::handlers::user_handler::_#3)
+2025-10-20T12:23:19.307Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.307Z INFO  [rustowlc::core::analyze] facts of DefId(0:227 ~ chat_app[883d]::handlers::user_handler::_#3) prepared; start analyze of DefId(0:227 ~ chat_app[883d]::handlers::user_handler::_#3)
+2025-10-20T12:23:19.307Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.307Z INFO  [rustowlc::core] borrow checked: 27 / 140
+2025-10-20T12:23:19.307Z INFO  [rustowlc::core] start borrowck of DefId(0:232 ~ chat_app[883d]::handlers::user_handler::_#4)
+2025-10-20T12:23:19.307Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.307Z INFO  [rustowlc::core::analyze] facts of DefId(0:232 ~ chat_app[883d]::handlers::user_handler::_#4) prepared; start analyze of DefId(0:232 ~ chat_app[883d]::handlers::user_handler::_#4)
+2025-10-20T12:23:19.308Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.308Z INFO  [rustowlc::core] borrow checked: 28 / 140
+2025-10-20T12:23:19.308Z INFO  [rustowlc::core] start borrowck of DefId(0:273 ~ chat_app[883d]::handlers::user_handler::_#4::{impl#0}::deserialize::FIELDS)
+2025-10-20T12:23:19.308Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.308Z INFO  [rustowlc::core::analyze] facts of DefId(0:273 ~ chat_app[883d]::handlers::user_handler::_#4::{impl#0}::deserialize::FIELDS) prepared; start analyze of DefId(0:273 ~ chat_app[883d]::handlers::user_handler::_#4::{impl#0}::deserialize::FIELDS)
+2025-10-20T12:23:19.308Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.308Z INFO  [rustowlc::core] borrow checked: 29 / 140
+2025-10-20T12:23:19.308Z INFO  [rustowlc::core] start borrowck of DefId(0:275 ~ chat_app[883d]::handlers::user_handler::get_users::{closure#0}::__CALLSITE)
+2025-10-20T12:23:19.309Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.310Z INFO  [rustowlc::core::analyze] facts of DefId(0:275 ~ chat_app[883d]::handlers::user_handler::get_users::{closure#0}::__CALLSITE) prepared; start analyze of DefId(0:275 ~ chat_app[883d]::handlers::user_handler::get_users::{closure#0}::__CALLSITE)
+2025-10-20T12:23:19.313Z INFO  [rustowlc::core] borrow checked: 30 / 140
+2025-10-20T12:23:19.313Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.313Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.314Z INFO  [rustowlc::core] start borrowck of DefId(0:277 ~ chat_app[883d]::handlers::user_handler::get_users::{closure#0}::__CALLSITE::META)
+2025-10-20T12:23:19.318Z INFO  [rustowlc::core::analyze] facts of DefId(0:277 ~ chat_app[883d]::handlers::user_handler::get_users::{closure#0}::__CALLSITE::META) prepared; start analyze of DefId(0:277 ~ chat_app[883d]::handlers::user_handler::get_users::{closure#0}::__CALLSITE::META)
+2025-10-20T12:23:19.350Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.350Z INFO  [rustowlc::core] borrow checked: 31 / 140
+2025-10-20T12:23:19.351Z INFO  [rustowlc::core] start borrowck of DefId(0:289 ~ chat_app[883d]::handlers::user_handler::create_user::{closure#0}::__CALLSITE)
+2025-10-20T12:23:19.351Z INFO  [rustowlc::core::analyze] facts of DefId(0:289 ~ chat_app[883d]::handlers::user_handler::create_user::{closure#0}::__CALLSITE) prepared; start analyze of DefId(0:289 ~ chat_app[883d]::handlers::user_handler::create_user::{closure#0}::__CALLSITE)
+2025-10-20T12:23:19.353Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.353Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.353Z INFO  [rustowlc::core] borrow checked: 32 / 140
+2025-10-20T12:23:19.354Z INFO  [rustowlc::core] start borrowck of DefId(0:291 ~ chat_app[883d]::handlers::user_handler::create_user::{closure#0}::__CALLSITE::META)
+2025-10-20T12:23:19.354Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.357Z INFO  [rustowlc::core::analyze] facts of DefId(0:291 ~ chat_app[883d]::handlers::user_handler::create_user::{closure#0}::__CALLSITE::META) prepared; start analyze of DefId(0:291 ~ chat_app[883d]::handlers::user_handler::create_user::{closure#0}::__CALLSITE::META)
+2025-10-20T12:23:19.365Z INFO  [rustowlc::core] borrow checked: 33 / 140
+2025-10-20T12:23:19.365Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.365Z INFO  [rustowlc::core] start borrowck of DefId(0:303 ~ chat_app[883d]::handlers::user_handler::create_user::{closure#0}::__CALLSITE#1)
+2025-10-20T12:23:19.366Z INFO  [rustowlc::core::analyze] facts of DefId(0:303 ~ chat_app[883d]::handlers::user_handler::create_user::{closure#0}::__CALLSITE#1) prepared; start analyze of DefId(0:303 ~ chat_app[883d]::handlers::user_handler::create_user::{closure#0}::__CALLSITE#1)
+2025-10-20T12:23:19.369Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.369Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.369Z INFO  [rustowlc::core] borrow checked: 34 / 140
+2025-10-20T12:23:19.369Z INFO  [rustowlc::core] start borrowck of DefId(0:305 ~ chat_app[883d]::handlers::user_handler::create_user::{closure#0}::__CALLSITE#1::META)
+2025-10-20T12:23:19.369Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.372Z INFO  [rustowlc::core::analyze] facts of DefId(0:305 ~ chat_app[883d]::handlers::user_handler::create_user::{closure#0}::__CALLSITE#1::META) prepared; start analyze of DefId(0:305 ~ chat_app[883d]::handlers::user_handler::create_user::{closure#0}::__CALLSITE#1::META)
+2025-10-20T12:23:19.387Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.387Z INFO  [rustowlc::core] borrow checked: 35 / 140
+2025-10-20T12:23:19.387Z INFO  [rustowlc::core] start borrowck of DefId(0:317 ~ chat_app[883d]::handlers::user_handler::login::{closure#0}::__CALLSITE)
+2025-10-20T12:23:19.389Z INFO  [rustowlc::core::analyze] facts of DefId(0:317 ~ chat_app[883d]::handlers::user_handler::login::{closure#0}::__CALLSITE) prepared; start analyze of DefId(0:317 ~ chat_app[883d]::handlers::user_handler::login::{closure#0}::__CALLSITE)
+2025-10-20T12:23:19.390Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.393Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.393Z INFO  [rustowlc::core] borrow checked: 36 / 140
+2025-10-20T12:23:19.393Z INFO  [rustowlc::core] start borrowck of DefId(0:319 ~ chat_app[883d]::handlers::user_handler::login::{closure#0}::__CALLSITE::META)
+2025-10-20T12:23:19.393Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.396Z INFO  [rustowlc::core::analyze] facts of DefId(0:319 ~ chat_app[883d]::handlers::user_handler::login::{closure#0}::__CALLSITE::META) prepared; start analyze of DefId(0:319 ~ chat_app[883d]::handlers::user_handler::login::{closure#0}::__CALLSITE::META)
+2025-10-20T12:23:19.409Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.409Z INFO  [rustowlc::core] borrow checked: 37 / 140
+2025-10-20T12:23:19.409Z INFO  [rustowlc::core] start borrowck of DefId(0:331 ~ chat_app[883d]::handlers::user_handler::login::{closure#0}::__CALLSITE#1)
+2025-10-20T12:23:19.410Z INFO  [rustowlc::core::analyze] facts of DefId(0:331 ~ chat_app[883d]::handlers::user_handler::login::{closure#0}::__CALLSITE#1) prepared; start analyze of DefId(0:331 ~ chat_app[883d]::handlers::user_handler::login::{closure#0}::__CALLSITE#1)
+2025-10-20T12:23:19.412Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.413Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.413Z INFO  [rustowlc::core] borrow checked: 38 / 140
+2025-10-20T12:23:19.413Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.413Z INFO  [rustowlc::core] start borrowck of DefId(0:333 ~ chat_app[883d]::handlers::user_handler::login::{closure#0}::__CALLSITE#1::META)
+2025-10-20T12:23:19.415Z INFO  [rustowlc::core::analyze] facts of DefId(0:333 ~ chat_app[883d]::handlers::user_handler::login::{closure#0}::__CALLSITE#1::META) prepared; start analyze of DefId(0:333 ~ chat_app[883d]::handlers::user_handler::login::{closure#0}::__CALLSITE#1::META)
+2025-10-20T12:23:19.430Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.430Z INFO  [rustowlc::core] borrow checked: 39 / 140
+2025-10-20T12:23:19.430Z INFO  [rustowlc::core] start borrowck of DefId(0:345 ~ chat_app[883d]::handlers::user_handler::login::{closure#0}::__CALLSITE#2)
+2025-10-20T12:23:19.431Z INFO  [rustowlc::core::analyze] facts of DefId(0:345 ~ chat_app[883d]::handlers::user_handler::login::{closure#0}::__CALLSITE#2) prepared; start analyze of DefId(0:345 ~ chat_app[883d]::handlers::user_handler::login::{closure#0}::__CALLSITE#2)
+2025-10-20T12:23:19.433Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.434Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.434Z INFO  [rustowlc::core] borrow checked: 40 / 140
+2025-10-20T12:23:19.434Z INFO  [rustowlc::core] start borrowck of DefId(0:347 ~ chat_app[883d]::handlers::user_handler::login::{closure#0}::__CALLSITE#2::META)
+2025-10-20T12:23:19.435Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.437Z INFO  [rustowlc::core::analyze] facts of DefId(0:347 ~ chat_app[883d]::handlers::user_handler::login::{closure#0}::__CALLSITE#2::META) prepared; start analyze of DefId(0:347 ~ chat_app[883d]::handlers::user_handler::login::{closure#0}::__CALLSITE#2::META)
+2025-10-20T12:23:19.446Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.446Z INFO  [rustowlc::core] borrow checked: 41 / 140
+2025-10-20T12:23:19.447Z INFO  [rustowlc::core] start borrowck of DefId(0:359 ~ chat_app[883d]::handlers::user_handler::login::{closure#0}::__CALLSITE#3)
+2025-10-20T12:23:19.448Z INFO  [rustowlc::core::analyze] facts of DefId(0:359 ~ chat_app[883d]::handlers::user_handler::login::{closure#0}::__CALLSITE#3) prepared; start analyze of DefId(0:359 ~ chat_app[883d]::handlers::user_handler::login::{closure#0}::__CALLSITE#3)
+2025-10-20T12:23:19.449Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.451Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.451Z INFO  [rustowlc::core] borrow checked: 42 / 140
+2025-10-20T12:23:19.452Z INFO  [rustowlc::core] start borrowck of DefId(0:361 ~ chat_app[883d]::handlers::user_handler::login::{closure#0}::__CALLSITE#3::META)
+2025-10-20T12:23:19.452Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.454Z INFO  [rustowlc::core::analyze] facts of DefId(0:361 ~ chat_app[883d]::handlers::user_handler::login::{closure#0}::__CALLSITE#3::META) prepared; start analyze of DefId(0:361 ~ chat_app[883d]::handlers::user_handler::login::{closure#0}::__CALLSITE#3::META)
+2025-10-20T12:23:19.462Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.462Z INFO  [rustowlc::core] borrow checked: 43 / 140
+2025-10-20T12:23:19.462Z INFO  [rustowlc::core] start borrowck of DefId(0:380 ~ chat_app[883d]::models::user::_)
+2025-10-20T12:23:19.463Z INFO  [rustowlc::core::analyze] facts of DefId(0:380 ~ chat_app[883d]::models::user::_) prepared; start analyze of DefId(0:380 ~ chat_app[883d]::models::user::_)
+2025-10-20T12:23:19.463Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.463Z INFO  [rustowlc::core] borrow checked: 44 / 140
+2025-10-20T12:23:19.463Z INFO  [rustowlc::core] start borrowck of DefId(0:385 ~ chat_app[883d]::models::user::_#1)
+2025-10-20T12:23:19.463Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.463Z INFO  [rustowlc::core::analyze] facts of DefId(0:385 ~ chat_app[883d]::models::user::_#1) prepared; start analyze of DefId(0:385 ~ chat_app[883d]::models::user::_#1)
+2025-10-20T12:23:19.464Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.464Z INFO  [rustowlc::core] borrow checked: 45 / 140
+2025-10-20T12:23:19.464Z INFO  [rustowlc::core] start borrowck of DefId(0:432 ~ chat_app[883d]::models::user::_#1::{impl#0}::deserialize::FIELDS)
+2025-10-20T12:23:19.464Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.465Z INFO  [rustowlc::core::analyze] facts of DefId(0:432 ~ chat_app[883d]::models::user::_#1::{impl#0}::deserialize::FIELDS) prepared; start analyze of DefId(0:432 ~ chat_app[883d]::models::user::_#1::{impl#0}::deserialize::FIELDS)
+2025-10-20T12:23:19.465Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.465Z INFO  [rustowlc::core] borrow checked: 46 / 140
+2025-10-20T12:23:19.465Z INFO  [rustowlc::core] start borrowck of DefId(0:444 ~ chat_app[883d]::models::room::_)
+2025-10-20T12:23:19.465Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.465Z INFO  [rustowlc::core::analyze] facts of DefId(0:444 ~ chat_app[883d]::models::room::_) prepared; start analyze of DefId(0:444 ~ chat_app[883d]::models::room::_)
+2025-10-20T12:23:19.465Z INFO  [rustowlc::core] borrow checked: 47 / 140
+2025-10-20T12:23:19.465Z INFO  [rustowlc::core] start borrowck of DefId(0:449 ~ chat_app[883d]::models::room::_#1)
+2025-10-20T12:23:19.465Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.465Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.466Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.466Z INFO  [rustowlc::core::analyze] facts of DefId(0:449 ~ chat_app[883d]::models::room::_#1) prepared; start analyze of DefId(0:449 ~ chat_app[883d]::models::room::_#1)
+2025-10-20T12:23:19.466Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.466Z INFO  [rustowlc::core] borrow checked: 48 / 140
+2025-10-20T12:23:19.466Z INFO  [rustowlc::core] start borrowck of DefId(0:494 ~ chat_app[883d]::models::room::_#1::{impl#0}::deserialize::FIELDS)
+2025-10-20T12:23:19.466Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.466Z INFO  [rustowlc::core::analyze] facts of DefId(0:494 ~ chat_app[883d]::models::room::_#1::{impl#0}::deserialize::FIELDS) prepared; start analyze of DefId(0:494 ~ chat_app[883d]::models::room::_#1::{impl#0}::deserialize::FIELDS)
+2025-10-20T12:23:19.467Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.467Z INFO  [rustowlc::core] borrow checked: 49 / 140
+2025-10-20T12:23:19.467Z INFO  [rustowlc::core] start borrowck of DefId(0:507 ~ chat_app[883d]::models::message::_)
+2025-10-20T12:23:19.467Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.467Z INFO  [rustowlc::core::analyze] facts of DefId(0:507 ~ chat_app[883d]::models::message::_) prepared; start analyze of DefId(0:507 ~ chat_app[883d]::models::message::_)
+2025-10-20T12:23:19.467Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.467Z INFO  [rustowlc::core] borrow checked: 50 / 140
+2025-10-20T12:23:19.467Z INFO  [rustowlc::core] start borrowck of DefId(0:512 ~ chat_app[883d]::models::message::_#1)
+2025-10-20T12:23:19.467Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.467Z INFO  [rustowlc::core::analyze] facts of DefId(0:512 ~ chat_app[883d]::models::message::_#1) prepared; start analyze of DefId(0:512 ~ chat_app[883d]::models::message::_#1)
+2025-10-20T12:23:19.467Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.467Z INFO  [rustowlc::core] borrow checked: 51 / 140
+2025-10-20T12:23:19.467Z INFO  [rustowlc::core] start borrowck of DefId(0:559 ~ chat_app[883d]::models::message::_#1::{impl#0}::deserialize::FIELDS)
+2025-10-20T12:23:19.467Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.468Z INFO  [rustowlc::core::analyze] facts of DefId(0:559 ~ chat_app[883d]::models::message::_#1::{impl#0}::deserialize::FIELDS) prepared; start analyze of DefId(0:559 ~ chat_app[883d]::models::message::_#1::{impl#0}::deserialize::FIELDS)
+2025-10-20T12:23:19.468Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.468Z INFO  [rustowlc::core] borrow checked: 52 / 140
+2025-10-20T12:23:19.468Z INFO  [rustowlc::core] start borrowck of DefId(0:572 ~ chat_app[883d]::models::attachment::_)
+2025-10-20T12:23:19.468Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.468Z INFO  [rustowlc::core::analyze] facts of DefId(0:572 ~ chat_app[883d]::models::attachment::_) prepared; start analyze of DefId(0:572 ~ chat_app[883d]::models::attachment::_)
+2025-10-20T12:23:19.468Z INFO  [rustowlc::core] borrow checked: 53 / 140
+2025-10-20T12:23:19.468Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.468Z INFO  [rustowlc::core] start borrowck of DefId(0:577 ~ chat_app[883d]::models::attachment::_#1)
+2025-10-20T12:23:19.468Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.469Z INFO  [rustowlc::core::analyze] facts of DefId(0:577 ~ chat_app[883d]::models::attachment::_#1) prepared; start analyze of DefId(0:577 ~ chat_app[883d]::models::attachment::_#1)
+2025-10-20T12:23:19.469Z INFO  [rustowlc::core] borrow checked: 54 / 140
+2025-10-20T12:23:19.469Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.469Z INFO  [rustowlc::core] start borrowck of DefId(0:624 ~ chat_app[883d]::models::attachment::_#1::{impl#0}::deserialize::FIELDS)
+2025-10-20T12:23:19.469Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.469Z INFO  [rustowlc::core::analyze] facts of DefId(0:624 ~ chat_app[883d]::models::attachment::_#1::{impl#0}::deserialize::FIELDS) prepared; start analyze of DefId(0:624 ~ chat_app[883d]::models::attachment::_#1::{impl#0}::deserialize::FIELDS)
+2025-10-20T12:23:19.469Z INFO  [rustowlc::core] borrow checked: 55 / 140
+2025-10-20T12:23:19.469Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.469Z INFO  [rustowlc::core] start borrowck of DefId(0:632 ~ chat_app[883d]::main::{closure#0}::__CALLSITE)
+2025-10-20T12:23:19.470Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.470Z INFO  [rustowlc::core::analyze] facts of DefId(0:632 ~ chat_app[883d]::main::{closure#0}::__CALLSITE) prepared; start analyze of DefId(0:632 ~ chat_app[883d]::main::{closure#0}::__CALLSITE)
+2025-10-20T12:23:19.472Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.473Z INFO  [rustowlc::core] borrow checked: 56 / 140
+2025-10-20T12:23:19.473Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.473Z INFO  [rustowlc::core] start borrowck of DefId(0:634 ~ chat_app[883d]::main::{closure#0}::__CALLSITE::META)
+2025-10-20T12:23:19.475Z INFO  [rustowlc::core::analyze] facts of DefId(0:634 ~ chat_app[883d]::main::{closure#0}::__CALLSITE::META) prepared; start analyze of DefId(0:634 ~ chat_app[883d]::main::{closure#0}::__CALLSITE::META)
+2025-10-20T12:23:19.483Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.483Z INFO  [rustowlc::core] borrow checked: 57 / 140
+2025-10-20T12:23:19.486Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.551Z INFO  [rustowlc::core] start borrowck of DefId(0:132 ~ chat_app[883d]::handlers::user_handler::_::{impl#0}::deserialize)
+2025-10-20T12:23:19.552Z INFO  [rustowlc::core::analyze] facts of DefId(0:132 ~ chat_app[883d]::handlers::user_handler::_::{impl#0}::deserialize) prepared; start analyze of DefId(0:132 ~ chat_app[883d]::handlers::user_handler::_::{impl#0}::deserialize)
+2025-10-20T12:23:19.553Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.553Z INFO  [rustowlc::core] borrow checked: 58 / 140
+2025-10-20T12:23:19.553Z INFO  [rustowlc::core] start borrowck of DefId(0:148 ~ chat_app[883d]::handlers::user_handler::_::{impl#0}::deserialize::{impl#0}::expecting)
+2025-10-20T12:23:19.553Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.554Z INFO  [rustowlc::core::analyze] facts of DefId(0:148 ~ chat_app[883d]::handlers::user_handler::_::{impl#0}::deserialize::{impl#0}::expecting) prepared; start analyze of DefId(0:148 ~ chat_app[883d]::handlers::user_handler::_::{impl#0}::deserialize::{impl#0}::expecting)
+2025-10-20T12:23:19.554Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.554Z INFO  [rustowlc::core] borrow checked: 59 / 140
+2025-10-20T12:23:19.554Z INFO  [rustowlc::core] start borrowck of DefId(0:149 ~ chat_app[883d]::handlers::user_handler::_::{impl#0}::deserialize::{impl#0}::visit_u64)
+2025-10-20T12:23:19.555Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.555Z INFO  [rustowlc::core::analyze] facts of DefId(0:149 ~ chat_app[883d]::handlers::user_handler::_::{impl#0}::deserialize::{impl#0}::visit_u64) prepared; start analyze of DefId(0:149 ~ chat_app[883d]::handlers::user_handler::_::{impl#0}::deserialize::{impl#0}::visit_u64)
+2025-10-20T12:23:19.555Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.556Z INFO  [rustowlc::core] borrow checked: 60 / 140
+2025-10-20T12:23:19.556Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.558Z INFO  [rustowlc::core] start borrowck of DefId(0:151 ~ chat_app[883d]::handlers::user_handler::_::{impl#0}::deserialize::{impl#0}::visit_str)
+2025-10-20T12:23:19.559Z INFO  [rustowlc::core::analyze] facts of DefId(0:151 ~ chat_app[883d]::handlers::user_handler::_::{impl#0}::deserialize::{impl#0}::visit_str) prepared; start analyze of DefId(0:151 ~ chat_app[883d]::handlers::user_handler::_::{impl#0}::deserialize::{impl#0}::visit_str)
+2025-10-20T12:23:19.559Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.559Z INFO  [rustowlc::core] borrow checked: 61 / 140
+2025-10-20T12:23:19.559Z INFO  [rustowlc::core] start borrowck of DefId(0:153 ~ chat_app[883d]::handlers::user_handler::_::{impl#0}::deserialize::{impl#0}::visit_bytes)
+2025-10-20T12:23:19.560Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.560Z INFO  [rustowlc::core::analyze] facts of DefId(0:153 ~ chat_app[883d]::handlers::user_handler::_::{impl#0}::deserialize::{impl#0}::visit_bytes) prepared; start analyze of DefId(0:153 ~ chat_app[883d]::handlers::user_handler::_::{impl#0}::deserialize::{impl#0}::visit_bytes)
+2025-10-20T12:23:19.561Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.561Z INFO  [rustowlc::core] borrow checked: 62 / 140
+2025-10-20T12:23:19.561Z INFO  [rustowlc::core] start borrowck of DefId(0:157 ~ chat_app[883d]::handlers::user_handler::_::{impl#0}::deserialize::{impl#1}::deserialize)
+2025-10-20T12:23:19.561Z INFO  [rustowlc::core::analyze] facts of DefId(0:157 ~ chat_app[883d]::handlers::user_handler::_::{impl#0}::deserialize::{impl#1}::deserialize) prepared; start analyze of DefId(0:157 ~ chat_app[883d]::handlers::user_handler::_::{impl#0}::deserialize::{impl#1}::deserialize)
+2025-10-20T12:23:19.562Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.562Z INFO  [rustowlc::core] borrow checked: 63 / 140
+2025-10-20T12:23:19.562Z INFO  [rustowlc::core] start borrowck of DefId(0:166 ~ chat_app[883d]::handlers::user_handler::_::{impl#0}::deserialize::{impl#2}::expecting)
+2025-10-20T12:23:19.562Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.562Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.562Z INFO  [rustowlc::core::analyze] facts of DefId(0:166 ~ chat_app[883d]::handlers::user_handler::_::{impl#0}::deserialize::{impl#2}::expecting) prepared; start analyze of DefId(0:166 ~ chat_app[883d]::handlers::user_handler::_::{impl#0}::deserialize::{impl#2}::expecting)
+2025-10-20T12:23:19.563Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.563Z INFO  [rustowlc::core] borrow checked: 64 / 140
+2025-10-20T12:23:19.563Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.564Z INFO  [rustowlc::core] start borrowck of DefId(0:167 ~ chat_app[883d]::handlers::user_handler::_::{impl#0}::deserialize::{impl#2}::visit_seq)
+2025-10-20T12:23:19.586Z INFO  [rustowlc::core::analyze] facts of DefId(0:167 ~ chat_app[883d]::handlers::user_handler::_::{impl#0}::deserialize::{impl#2}::visit_seq) prepared; start analyze of DefId(0:167 ~ chat_app[883d]::handlers::user_handler::_::{impl#0}::deserialize::{impl#2}::visit_seq)
+2025-10-20T12:23:19.589Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.589Z INFO  [rustowlc::core] borrow checked: 65 / 140
+2025-10-20T12:23:19.590Z INFO  [rustowlc::core] start borrowck of DefId(0:169 ~ chat_app[883d]::handlers::user_handler::_::{impl#0}::deserialize::{impl#2}::visit_map)
+2025-10-20T12:23:19.629Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.668Z INFO  [rustowlc::core::analyze] facts of DefId(0:169 ~ chat_app[883d]::handlers::user_handler::_::{impl#0}::deserialize::{impl#2}::visit_map) prepared; start analyze of DefId(0:169 ~ chat_app[883d]::handlers::user_handler::_::{impl#0}::deserialize::{impl#2}::visit_map)
+2025-10-20T12:23:19.674Z INFO  [rustowlc::core] borrow checked: 66 / 140
+2025-10-20T12:23:19.674Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.674Z INFO  [rustowlc::core] start borrowck of DefId(0:179 ~ chat_app[883d]::handlers::user_handler::_#1::{impl#0}::deserialize)
+2025-10-20T12:23:19.675Z INFO  [rustowlc::core::analyze] facts of DefId(0:179 ~ chat_app[883d]::handlers::user_handler::_#1::{impl#0}::deserialize) prepared; start analyze of DefId(0:179 ~ chat_app[883d]::handlers::user_handler::_#1::{impl#0}::deserialize)
+2025-10-20T12:23:19.675Z INFO  [rustowlc::core] borrow checked: 67 / 140
+2025-10-20T12:23:19.675Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.675Z INFO  [rustowlc::core] start borrowck of DefId(0:193 ~ chat_app[883d]::handlers::user_handler::_#1::{impl#0}::deserialize::{impl#0}::expecting)
+2025-10-20T12:23:19.676Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.676Z INFO  [rustowlc::core::analyze] facts of DefId(0:193 ~ chat_app[883d]::handlers::user_handler::_#1::{impl#0}::deserialize::{impl#0}::expecting) prepared; start analyze of DefId(0:193 ~ chat_app[883d]::handlers::user_handler::_#1::{impl#0}::deserialize::{impl#0}::expecting)
+2025-10-20T12:23:19.676Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.676Z INFO  [rustowlc::core] borrow checked: 68 / 140
+2025-10-20T12:23:19.676Z INFO  [rustowlc::core] start borrowck of DefId(0:194 ~ chat_app[883d]::handlers::user_handler::_#1::{impl#0}::deserialize::{impl#0}::visit_u64)
+2025-10-20T12:23:19.677Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.677Z INFO  [rustowlc::core::analyze] facts of DefId(0:194 ~ chat_app[883d]::handlers::user_handler::_#1::{impl#0}::deserialize::{impl#0}::visit_u64) prepared; start analyze of DefId(0:194 ~ chat_app[883d]::handlers::user_handler::_#1::{impl#0}::deserialize::{impl#0}::visit_u64)
+2025-10-20T12:23:19.677Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.677Z INFO  [rustowlc::core] borrow checked: 69 / 140
+2025-10-20T12:23:19.677Z INFO  [rustowlc::core] start borrowck of DefId(0:196 ~ chat_app[883d]::handlers::user_handler::_#1::{impl#0}::deserialize::{impl#0}::visit_str)
+2025-10-20T12:23:19.678Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.678Z INFO  [rustowlc::core::analyze] facts of DefId(0:196 ~ chat_app[883d]::handlers::user_handler::_#1::{impl#0}::deserialize::{impl#0}::visit_str) prepared; start analyze of DefId(0:196 ~ chat_app[883d]::handlers::user_handler::_#1::{impl#0}::deserialize::{impl#0}::visit_str)
+2025-10-20T12:23:19.678Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.678Z INFO  [rustowlc::core] borrow checked: 70 / 140
+2025-10-20T12:23:19.678Z INFO  [rustowlc::core] start borrowck of DefId(0:198 ~ chat_app[883d]::handlers::user_handler::_#1::{impl#0}::deserialize::{impl#0}::visit_bytes)
+2025-10-20T12:23:19.679Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.679Z INFO  [rustowlc::core::analyze] facts of DefId(0:198 ~ chat_app[883d]::handlers::user_handler::_#1::{impl#0}::deserialize::{impl#0}::visit_bytes) prepared; start analyze of DefId(0:198 ~ chat_app[883d]::handlers::user_handler::_#1::{impl#0}::deserialize::{impl#0}::visit_bytes)
+2025-10-20T12:23:19.679Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.679Z INFO  [rustowlc::core] borrow checked: 71 / 140
+2025-10-20T12:23:19.680Z INFO  [rustowlc::core] start borrowck of DefId(0:202 ~ chat_app[883d]::handlers::user_handler::_#1::{impl#0}::deserialize::{impl#1}::deserialize)
+2025-10-20T12:23:19.680Z INFO  [rustowlc::core::analyze] facts of DefId(0:202 ~ chat_app[883d]::handlers::user_handler::_#1::{impl#0}::deserialize::{impl#1}::deserialize) prepared; start analyze of DefId(0:202 ~ chat_app[883d]::handlers::user_handler::_#1::{impl#0}::deserialize::{impl#1}::deserialize)
+2025-10-20T12:23:19.681Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.681Z INFO  [rustowlc::core] borrow checked: 72 / 140
+2025-10-20T12:23:19.681Z INFO  [rustowlc::core] start borrowck of DefId(0:211 ~ chat_app[883d]::handlers::user_handler::_#1::{impl#0}::deserialize::{impl#2}::expecting)
+2025-10-20T12:23:19.681Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.681Z INFO  [rustowlc::core::analyze] facts of DefId(0:211 ~ chat_app[883d]::handlers::user_handler::_#1::{impl#0}::deserialize::{impl#2}::expecting) prepared; start analyze of DefId(0:211 ~ chat_app[883d]::handlers::user_handler::_#1::{impl#0}::deserialize::{impl#2}::expecting)
+2025-10-20T12:23:19.681Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.681Z INFO  [rustowlc::core] borrow checked: 73 / 140
+2025-10-20T12:23:19.682Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.682Z INFO  [rustowlc::core] start borrowck of DefId(0:212 ~ chat_app[883d]::handlers::user_handler::_#1::{impl#0}::deserialize::{impl#2}::visit_seq)
+2025-10-20T12:23:19.682Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.694Z INFO  [rustowlc::core::analyze] facts of DefId(0:212 ~ chat_app[883d]::handlers::user_handler::_#1::{impl#0}::deserialize::{impl#2}::visit_seq) prepared; start analyze of DefId(0:212 ~ chat_app[883d]::handlers::user_handler::_#1::{impl#0}::deserialize::{impl#2}::visit_seq)
+2025-10-20T12:23:19.696Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.696Z INFO  [rustowlc::core] borrow checked: 74 / 140
+2025-10-20T12:23:19.697Z INFO  [rustowlc::core] start borrowck of DefId(0:214 ~ chat_app[883d]::handlers::user_handler::_#1::{impl#0}::deserialize::{impl#2}::visit_map)
+2025-10-20T12:23:19.720Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.743Z INFO  [rustowlc::core::analyze] facts of DefId(0:214 ~ chat_app[883d]::handlers::user_handler::_#1::{impl#0}::deserialize::{impl#2}::visit_map) prepared; start analyze of DefId(0:214 ~ chat_app[883d]::handlers::user_handler::_#1::{impl#0}::deserialize::{impl#2}::visit_map)
+2025-10-20T12:23:19.749Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.749Z INFO  [rustowlc::core] borrow checked: 75 / 140
+2025-10-20T12:23:19.750Z INFO  [rustowlc::core] start borrowck of DefId(0:222 ~ chat_app[883d]::handlers::user_handler::_#2::{impl#0}::serialize)
+2025-10-20T12:23:19.756Z INFO  [rustowlc::core::analyze] facts of DefId(0:222 ~ chat_app[883d]::handlers::user_handler::_#2::{impl#0}::serialize) prepared; start analyze of DefId(0:222 ~ chat_app[883d]::handlers::user_handler::_#2::{impl#0}::serialize)
+2025-10-20T12:23:19.758Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.760Z INFO  [rustowlc::core] borrow checked: 76 / 140
+2025-10-20T12:23:19.760Z INFO  [rustowlc::core] start borrowck of DefId(0:230 ~ chat_app[883d]::handlers::user_handler::_#3::{impl#0}::serialize)
+2025-10-20T12:23:19.767Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.773Z INFO  [rustowlc::core::analyze] facts of DefId(0:230 ~ chat_app[883d]::handlers::user_handler::_#3::{impl#0}::serialize) prepared; start analyze of DefId(0:230 ~ chat_app[883d]::handlers::user_handler::_#3::{impl#0}::serialize)
+2025-10-20T12:23:19.774Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.774Z INFO  [rustowlc::core] borrow checked: 77 / 140
+2025-10-20T12:23:19.775Z INFO  [rustowlc::core] start borrowck of DefId(0:236 ~ chat_app[883d]::handlers::user_handler::_#4::{impl#0}::deserialize)
+2025-10-20T12:23:19.776Z INFO  [rustowlc::core::analyze] facts of DefId(0:236 ~ chat_app[883d]::handlers::user_handler::_#4::{impl#0}::deserialize) prepared; start analyze of DefId(0:236 ~ chat_app[883d]::handlers::user_handler::_#4::{impl#0}::deserialize)
+2025-10-20T12:23:19.776Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.777Z INFO  [rustowlc::core] borrow checked: 78 / 140
+2025-10-20T12:23:19.777Z INFO  [rustowlc::core] start borrowck of DefId(0:250 ~ chat_app[883d]::handlers::user_handler::_#4::{impl#0}::deserialize::{impl#0}::expecting)
+2025-10-20T12:23:19.777Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.778Z INFO  [rustowlc::core::analyze] facts of DefId(0:250 ~ chat_app[883d]::handlers::user_handler::_#4::{impl#0}::deserialize::{impl#0}::expecting) prepared; start analyze of DefId(0:250 ~ chat_app[883d]::handlers::user_handler::_#4::{impl#0}::deserialize::{impl#0}::expecting)
+2025-10-20T12:23:19.778Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.778Z INFO  [rustowlc::core] borrow checked: 79 / 140
+2025-10-20T12:23:19.778Z INFO  [rustowlc::core] start borrowck of DefId(0:251 ~ chat_app[883d]::handlers::user_handler::_#4::{impl#0}::deserialize::{impl#0}::visit_u64)
+2025-10-20T12:23:19.779Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.779Z INFO  [rustowlc::core::analyze] facts of DefId(0:251 ~ chat_app[883d]::handlers::user_handler::_#4::{impl#0}::deserialize::{impl#0}::visit_u64) prepared; start analyze of DefId(0:251 ~ chat_app[883d]::handlers::user_handler::_#4::{impl#0}::deserialize::{impl#0}::visit_u64)
+2025-10-20T12:23:19.779Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.779Z INFO  [rustowlc::core] borrow checked: 80 / 140
+2025-10-20T12:23:19.779Z INFO  [rustowlc::core] start borrowck of DefId(0:253 ~ chat_app[883d]::handlers::user_handler::_#4::{impl#0}::deserialize::{impl#0}::visit_str)
+2025-10-20T12:23:19.779Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.780Z INFO  [rustowlc::core::analyze] facts of DefId(0:253 ~ chat_app[883d]::handlers::user_handler::_#4::{impl#0}::deserialize::{impl#0}::visit_str) prepared; start analyze of DefId(0:253 ~ chat_app[883d]::handlers::user_handler::_#4::{impl#0}::deserialize::{impl#0}::visit_str)
+2025-10-20T12:23:19.780Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.781Z INFO  [rustowlc::core] borrow checked: 81 / 140
+2025-10-20T12:23:19.781Z INFO  [rustowlc::core] start borrowck of DefId(0:255 ~ chat_app[883d]::handlers::user_handler::_#4::{impl#0}::deserialize::{impl#0}::visit_bytes)
+2025-10-20T12:23:19.781Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.782Z INFO  [rustowlc::core::analyze] facts of DefId(0:255 ~ chat_app[883d]::handlers::user_handler::_#4::{impl#0}::deserialize::{impl#0}::visit_bytes) prepared; start analyze of DefId(0:255 ~ chat_app[883d]::handlers::user_handler::_#4::{impl#0}::deserialize::{impl#0}::visit_bytes)
+2025-10-20T12:23:19.782Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.782Z INFO  [rustowlc::core] borrow checked: 82 / 140
+2025-10-20T12:23:19.782Z INFO  [rustowlc::core] start borrowck of DefId(0:259 ~ chat_app[883d]::handlers::user_handler::_#4::{impl#0}::deserialize::{impl#1}::deserialize)
+2025-10-20T12:23:19.783Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.783Z INFO  [rustowlc::core::analyze] facts of DefId(0:259 ~ chat_app[883d]::handlers::user_handler::_#4::{impl#0}::deserialize::{impl#1}::deserialize) prepared; start analyze of DefId(0:259 ~ chat_app[883d]::handlers::user_handler::_#4::{impl#0}::deserialize::{impl#1}::deserialize)
+2025-10-20T12:23:19.784Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.784Z INFO  [rustowlc::core] borrow checked: 83 / 140
+2025-10-20T12:23:19.784Z INFO  [rustowlc::core] start borrowck of DefId(0:268 ~ chat_app[883d]::handlers::user_handler::_#4::{impl#0}::deserialize::{impl#2}::expecting)
+2025-10-20T12:23:19.784Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.785Z INFO  [rustowlc::core::analyze] facts of DefId(0:268 ~ chat_app[883d]::handlers::user_handler::_#4::{impl#0}::deserialize::{impl#2}::expecting) prepared; start analyze of DefId(0:268 ~ chat_app[883d]::handlers::user_handler::_#4::{impl#0}::deserialize::{impl#2}::expecting)
+2025-10-20T12:23:19.785Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.786Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.786Z INFO  [rustowlc::core] borrow checked: 84 / 140
+2025-10-20T12:23:19.786Z INFO  [rustowlc::core] start borrowck of DefId(0:269 ~ chat_app[883d]::handlers::user_handler::_#4::{impl#0}::deserialize::{impl#2}::visit_seq)
+2025-10-20T12:23:19.794Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.797Z INFO  [rustowlc::core::analyze] facts of DefId(0:269 ~ chat_app[883d]::handlers::user_handler::_#4::{impl#0}::deserialize::{impl#2}::visit_seq) prepared; start analyze of DefId(0:269 ~ chat_app[883d]::handlers::user_handler::_#4::{impl#0}::deserialize::{impl#2}::visit_seq)
+2025-10-20T12:23:19.800Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.800Z INFO  [rustowlc::core] borrow checked: 85 / 140
+2025-10-20T12:23:19.801Z INFO  [rustowlc::core] start borrowck of DefId(0:271 ~ chat_app[883d]::handlers::user_handler::_#4::{impl#0}::deserialize::{impl#2}::visit_map)
+2025-10-20T12:23:19.825Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.850Z INFO  [rustowlc::core::analyze] facts of DefId(0:271 ~ chat_app[883d]::handlers::user_handler::_#4::{impl#0}::deserialize::{impl#2}::visit_map) prepared; start analyze of DefId(0:271 ~ chat_app[883d]::handlers::user_handler::_#4::{impl#0}::deserialize::{impl#2}::visit_map)
+2025-10-20T12:23:19.858Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.860Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.860Z INFO  [rustowlc::core] borrow checked: 86 / 140
+2025-10-20T12:23:19.864Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.864Z INFO  [rustowlc::core] start borrowck of DefId(0:379 ~ chat_app[883d]::models::user::{impl#0}::fmt)
+2025-10-20T12:23:19.869Z INFO  [rustowlc::core::analyze] facts of DefId(0:379 ~ chat_app[883d]::models::user::{impl#0}::fmt) prepared; start analyze of DefId(0:379 ~ chat_app[883d]::models::user::{impl#0}::fmt)
+2025-10-20T12:23:19.870Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.870Z INFO  [rustowlc::core] borrow checked: 87 / 140
+2025-10-20T12:23:19.872Z INFO  [rustowlc::core] start borrowck of DefId(0:383 ~ chat_app[883d]::models::user::_::{impl#0}::serialize)
+2025-10-20T12:23:19.880Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.908Z INFO  [rustowlc::core::analyze] facts of DefId(0:383 ~ chat_app[883d]::models::user::_::{impl#0}::serialize) prepared; start analyze of DefId(0:383 ~ chat_app[883d]::models::user::_::{impl#0}::serialize)
+2025-10-20T12:23:19.909Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.909Z INFO  [rustowlc::core] borrow checked: 88 / 140
+2025-10-20T12:23:19.910Z INFO  [rustowlc::core] start borrowck of DefId(0:389 ~ chat_app[883d]::models::user::_#1::{impl#0}::deserialize)
+2025-10-20T12:23:19.911Z INFO  [rustowlc::core::analyze] facts of DefId(0:389 ~ chat_app[883d]::models::user::_#1::{impl#0}::deserialize) prepared; start analyze of DefId(0:389 ~ chat_app[883d]::models::user::_#1::{impl#0}::deserialize)
+2025-10-20T12:23:19.911Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.911Z INFO  [rustowlc::core] borrow checked: 89 / 140
+2025-10-20T12:23:19.911Z INFO  [rustowlc::core] start borrowck of DefId(0:409 ~ chat_app[883d]::models::user::_#1::{impl#0}::deserialize::{impl#0}::expecting)
+2025-10-20T12:23:19.912Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.912Z INFO  [rustowlc::core::analyze] facts of DefId(0:409 ~ chat_app[883d]::models::user::_#1::{impl#0}::deserialize::{impl#0}::expecting) prepared; start analyze of DefId(0:409 ~ chat_app[883d]::models::user::_#1::{impl#0}::deserialize::{impl#0}::expecting)
+2025-10-20T12:23:19.912Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.912Z INFO  [rustowlc::core] borrow checked: 90 / 140
+2025-10-20T12:23:19.912Z INFO  [rustowlc::core] start borrowck of DefId(0:410 ~ chat_app[883d]::models::user::_#1::{impl#0}::deserialize::{impl#0}::visit_u64)
+2025-10-20T12:23:19.912Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.913Z INFO  [rustowlc::core::analyze] facts of DefId(0:410 ~ chat_app[883d]::models::user::_#1::{impl#0}::deserialize::{impl#0}::visit_u64) prepared; start analyze of DefId(0:410 ~ chat_app[883d]::models::user::_#1::{impl#0}::deserialize::{impl#0}::visit_u64)
+2025-10-20T12:23:19.913Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.913Z INFO  [rustowlc::core] borrow checked: 91 / 140
+2025-10-20T12:23:19.913Z INFO  [rustowlc::core] start borrowck of DefId(0:412 ~ chat_app[883d]::models::user::_#1::{impl#0}::deserialize::{impl#0}::visit_str)
+2025-10-20T12:23:19.913Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.914Z INFO  [rustowlc::core::analyze] facts of DefId(0:412 ~ chat_app[883d]::models::user::_#1::{impl#0}::deserialize::{impl#0}::visit_str) prepared; start analyze of DefId(0:412 ~ chat_app[883d]::models::user::_#1::{impl#0}::deserialize::{impl#0}::visit_str)
+2025-10-20T12:23:19.914Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.914Z INFO  [rustowlc::core] borrow checked: 92 / 140
+2025-10-20T12:23:19.915Z INFO  [rustowlc::core] start borrowck of DefId(0:414 ~ chat_app[883d]::models::user::_#1::{impl#0}::deserialize::{impl#0}::visit_bytes)
+2025-10-20T12:23:19.916Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.917Z INFO  [rustowlc::core::analyze] facts of DefId(0:414 ~ chat_app[883d]::models::user::_#1::{impl#0}::deserialize::{impl#0}::visit_bytes) prepared; start analyze of DefId(0:414 ~ chat_app[883d]::models::user::_#1::{impl#0}::deserialize::{impl#0}::visit_bytes)
+2025-10-20T12:23:19.918Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.918Z INFO  [rustowlc::core] borrow checked: 93 / 140
+2025-10-20T12:23:19.918Z INFO  [rustowlc::core] start borrowck of DefId(0:418 ~ chat_app[883d]::models::user::_#1::{impl#0}::deserialize::{impl#1}::deserialize)
+2025-10-20T12:23:19.918Z INFO  [rustowlc::core::analyze] facts of DefId(0:418 ~ chat_app[883d]::models::user::_#1::{impl#0}::deserialize::{impl#1}::deserialize) prepared; start analyze of DefId(0:418 ~ chat_app[883d]::models::user::_#1::{impl#0}::deserialize::{impl#1}::deserialize)
+2025-10-20T12:23:19.918Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.919Z INFO  [rustowlc::core] borrow checked: 94 / 140
+2025-10-20T12:23:19.919Z INFO  [rustowlc::core] start borrowck of DefId(0:427 ~ chat_app[883d]::models::user::_#1::{impl#0}::deserialize::{impl#2}::expecting)
+2025-10-20T12:23:19.919Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.919Z INFO  [rustowlc::core::analyze] facts of DefId(0:427 ~ chat_app[883d]::models::user::_#1::{impl#0}::deserialize::{impl#2}::expecting) prepared; start analyze of DefId(0:427 ~ chat_app[883d]::models::user::_#1::{impl#0}::deserialize::{impl#2}::expecting)
+2025-10-20T12:23:19.919Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.920Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.921Z INFO  [rustowlc::core] borrow checked: 95 / 140
+2025-10-20T12:23:19.922Z INFO  [rustowlc::core] start borrowck of DefId(0:428 ~ chat_app[883d]::models::user::_#1::{impl#0}::deserialize::{impl#2}::visit_seq)
+2025-10-20T12:23:19.922Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.962Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:19.978Z INFO  [rustowlc::core::analyze] facts of DefId(0:428 ~ chat_app[883d]::models::user::_#1::{impl#0}::deserialize::{impl#2}::visit_seq) prepared; start analyze of DefId(0:428 ~ chat_app[883d]::models::user::_#1::{impl#0}::deserialize::{impl#2}::visit_seq)
+2025-10-20T12:23:19.979Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:19.979Z INFO  [rustowlc::core] borrow checked: 96 / 140
+2025-10-20T12:23:19.981Z INFO  [rustowlc::core] start borrowck of DefId(0:430 ~ chat_app[883d]::models::user::_#1::{impl#0}::deserialize::{impl#2}::visit_map)
+2025-10-20T12:23:19.983Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:20.089Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:20.141Z INFO  [rustowlc::core::analyze] facts of DefId(0:430 ~ chat_app[883d]::models::user::_#1::{impl#0}::deserialize::{impl#2}::visit_map) prepared; start analyze of DefId(0:430 ~ chat_app[883d]::models::user::_#1::{impl#0}::deserialize::{impl#2}::visit_map)
+2025-10-20T12:23:20.143Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:20.143Z INFO  [rustowlc::core] borrow checked: 97 / 140
+2025-10-20T12:23:20.144Z INFO  [rustowlc::core] start borrowck of DefId(0:436 ~ chat_app[883d]::models::user::{impl#1}::from_row)
+2025-10-20T12:23:20.162Z INFO  [rustowlc::core::analyze] facts of DefId(0:436 ~ chat_app[883d]::models::user::{impl#1}::from_row) prepared; start analyze of DefId(0:436 ~ chat_app[883d]::models::user::{impl#1}::from_row)
+2025-10-20T12:23:20.163Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:20.163Z INFO  [rustowlc::core] borrow checked: 98 / 140
+2025-10-20T12:23:20.163Z INFO  [rustowlc::core] start borrowck of DefId(0:443 ~ chat_app[883d]::models::room::{impl#0}::fmt)
+2025-10-20T12:23:20.166Z INFO  [rustowlc::core::analyze] facts of DefId(0:443 ~ chat_app[883d]::models::room::{impl#0}::fmt) prepared; start analyze of DefId(0:443 ~ chat_app[883d]::models::room::{impl#0}::fmt)
+2025-10-20T12:23:20.166Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:20.166Z INFO  [rustowlc::core] borrow checked: 99 / 140
+2025-10-20T12:23:20.167Z INFO  [rustowlc::core] start borrowck of DefId(0:447 ~ chat_app[883d]::models::room::_::{impl#0}::serialize)
+2025-10-20T12:23:20.174Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:20.195Z INFO  [rustowlc::core::analyze] facts of DefId(0:447 ~ chat_app[883d]::models::room::_::{impl#0}::serialize) prepared; start analyze of DefId(0:447 ~ chat_app[883d]::models::room::_::{impl#0}::serialize)
+2025-10-20T12:23:20.196Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:20.196Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:20.196Z INFO  [rustowlc::core] borrow checked: 100 / 140
+2025-10-20T12:23:20.196Z INFO  [rustowlc::core] start borrowck of DefId(0:453 ~ chat_app[883d]::models::room::_#1::{impl#0}::deserialize)
+2025-10-20T12:23:20.197Z INFO  [rustowlc::core::analyze] facts of DefId(0:453 ~ chat_app[883d]::models::room::_#1::{impl#0}::deserialize) prepared; start analyze of DefId(0:453 ~ chat_app[883d]::models::room::_#1::{impl#0}::deserialize)
+2025-10-20T12:23:20.197Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:20.198Z INFO  [rustowlc::core] borrow checked: 101 / 140
+2025-10-20T12:23:20.198Z INFO  [rustowlc::core] start borrowck of DefId(0:471 ~ chat_app[883d]::models::room::_#1::{impl#0}::deserialize::{impl#0}::expecting)
+2025-10-20T12:23:20.198Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:20.198Z INFO  [rustowlc::core::analyze] facts of DefId(0:471 ~ chat_app[883d]::models::room::_#1::{impl#0}::deserialize::{impl#0}::expecting) prepared; start analyze of DefId(0:471 ~ chat_app[883d]::models::room::_#1::{impl#0}::deserialize::{impl#0}::expecting)
+2025-10-20T12:23:20.198Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:20.198Z INFO  [rustowlc::core] borrow checked: 102 / 140
+2025-10-20T12:23:20.199Z INFO  [rustowlc::core] start borrowck of DefId(0:472 ~ chat_app[883d]::models::room::_#1::{impl#0}::deserialize::{impl#0}::visit_u64)
+2025-10-20T12:23:20.199Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:20.200Z INFO  [rustowlc::core::analyze] facts of DefId(0:472 ~ chat_app[883d]::models::room::_#1::{impl#0}::deserialize::{impl#0}::visit_u64) prepared; start analyze of DefId(0:472 ~ chat_app[883d]::models::room::_#1::{impl#0}::deserialize::{impl#0}::visit_u64)
+2025-10-20T12:23:20.200Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:20.200Z INFO  [rustowlc::core] borrow checked: 103 / 140
+2025-10-20T12:23:20.200Z INFO  [rustowlc::core] start borrowck of DefId(0:474 ~ chat_app[883d]::models::room::_#1::{impl#0}::deserialize::{impl#0}::visit_str)
+2025-10-20T12:23:20.200Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:20.201Z INFO  [rustowlc::core::analyze] facts of DefId(0:474 ~ chat_app[883d]::models::room::_#1::{impl#0}::deserialize::{impl#0}::visit_str) prepared; start analyze of DefId(0:474 ~ chat_app[883d]::models::room::_#1::{impl#0}::deserialize::{impl#0}::visit_str)
+2025-10-20T12:23:20.201Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:20.201Z INFO  [rustowlc::core] borrow checked: 104 / 140
+2025-10-20T12:23:20.202Z INFO  [rustowlc::core] start borrowck of DefId(0:476 ~ chat_app[883d]::models::room::_#1::{impl#0}::deserialize::{impl#0}::visit_bytes)
+2025-10-20T12:23:20.203Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:20.204Z INFO  [rustowlc::core::analyze] facts of DefId(0:476 ~ chat_app[883d]::models::room::_#1::{impl#0}::deserialize::{impl#0}::visit_bytes) prepared; start analyze of DefId(0:476 ~ chat_app[883d]::models::room::_#1::{impl#0}::deserialize::{impl#0}::visit_bytes)
+2025-10-20T12:23:20.205Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:20.207Z INFO  [rustowlc::core] borrow checked: 105 / 140
+2025-10-20T12:23:20.208Z INFO  [rustowlc::core] start borrowck of DefId(0:480 ~ chat_app[883d]::models::room::_#1::{impl#0}::deserialize::{impl#1}::deserialize)
+2025-10-20T12:23:20.209Z INFO  [rustowlc::core::analyze] facts of DefId(0:480 ~ chat_app[883d]::models::room::_#1::{impl#0}::deserialize::{impl#1}::deserialize) prepared; start analyze of DefId(0:480 ~ chat_app[883d]::models::room::_#1::{impl#0}::deserialize::{impl#1}::deserialize)
+2025-10-20T12:23:20.209Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:20.209Z INFO  [rustowlc::core] borrow checked: 106 / 140
+2025-10-20T12:23:20.209Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:20.209Z INFO  [rustowlc::core] start borrowck of DefId(0:489 ~ chat_app[883d]::models::room::_#1::{impl#0}::deserialize::{impl#2}::expecting)
+2025-10-20T12:23:20.209Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:20.210Z INFO  [rustowlc::core::analyze] facts of DefId(0:489 ~ chat_app[883d]::models::room::_#1::{impl#0}::deserialize::{impl#2}::expecting) prepared; start analyze of DefId(0:489 ~ chat_app[883d]::models::room::_#1::{impl#0}::deserialize::{impl#2}::expecting)
+2025-10-20T12:23:20.210Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:20.210Z INFO  [rustowlc::core] borrow checked: 107 / 140
+2025-10-20T12:23:20.211Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:20.211Z INFO  [rustowlc::core] start borrowck of DefId(0:490 ~ chat_app[883d]::models::room::_#1::{impl#0}::deserialize::{impl#2}::visit_seq)
+2025-10-20T12:23:20.253Z INFO  [rustowlc::core::analyze] facts of DefId(0:490 ~ chat_app[883d]::models::room::_#1::{impl#0}::deserialize::{impl#2}::visit_seq) prepared; start analyze of DefId(0:490 ~ chat_app[883d]::models::room::_#1::{impl#0}::deserialize::{impl#2}::visit_seq)
+2025-10-20T12:23:20.254Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:20.254Z INFO  [rustowlc::core] borrow checked: 108 / 140
+2025-10-20T12:23:20.256Z INFO  [rustowlc::core] start borrowck of DefId(0:492 ~ chat_app[883d]::models::room::_#1::{impl#0}::deserialize::{impl#2}::visit_map)
+2025-10-20T12:23:20.282Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:20.327Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:20.375Z INFO  [rustowlc::core::analyze] facts of DefId(0:492 ~ chat_app[883d]::models::room::_#1::{impl#0}::deserialize::{impl#2}::visit_map) prepared; start analyze of DefId(0:492 ~ chat_app[883d]::models::room::_#1::{impl#0}::deserialize::{impl#2}::visit_map)
+2025-10-20T12:23:20.377Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:20.377Z INFO  [rustowlc::core] borrow checked: 109 / 140
+2025-10-20T12:23:20.378Z INFO  [rustowlc::core] start borrowck of DefId(0:498 ~ chat_app[883d]::models::room::{impl#1}::from_row)
+2025-10-20T12:23:20.392Z INFO  [rustowlc::core::analyze] facts of DefId(0:498 ~ chat_app[883d]::models::room::{impl#1}::from_row) prepared; start analyze of DefId(0:498 ~ chat_app[883d]::models::room::{impl#1}::from_row)
+2025-10-20T12:23:20.393Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:20.396Z INFO  [rustowlc::core] borrow checked: 110 / 140
+2025-10-20T12:23:20.396Z INFO  [rustowlc::core] start borrowck of DefId(0:506 ~ chat_app[883d]::models::message::{impl#0}::fmt)
+2025-10-20T12:23:20.401Z INFO  [rustowlc::core::analyze] facts of DefId(0:506 ~ chat_app[883d]::models::message::{impl#0}::fmt) prepared; start analyze of DefId(0:506 ~ chat_app[883d]::models::message::{impl#0}::fmt)
+2025-10-20T12:23:20.401Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:20.401Z INFO  [rustowlc::core] borrow checked: 111 / 140
+2025-10-20T12:23:20.402Z INFO  [rustowlc::core] start borrowck of DefId(0:510 ~ chat_app[883d]::models::message::_::{impl#0}::serialize)
+2025-10-20T12:23:20.411Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:20.415Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:20.455Z INFO  [rustowlc::core::analyze] facts of DefId(0:510 ~ chat_app[883d]::models::message::_::{impl#0}::serialize) prepared; start analyze of DefId(0:510 ~ chat_app[883d]::models::message::_::{impl#0}::serialize)
+2025-10-20T12:23:20.456Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:20.460Z INFO  [rustowlc::core] borrow checked: 112 / 140
+2025-10-20T12:23:20.461Z INFO  [rustowlc::core] start borrowck of DefId(0:516 ~ chat_app[883d]::models::message::_#1::{impl#0}::deserialize)
+2025-10-20T12:23:20.462Z INFO  [rustowlc::core::analyze] facts of DefId(0:516 ~ chat_app[883d]::models::message::_#1::{impl#0}::deserialize) prepared; start analyze of DefId(0:516 ~ chat_app[883d]::models::message::_#1::{impl#0}::deserialize)
+2025-10-20T12:23:20.462Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:20.462Z INFO  [rustowlc::core] borrow checked: 113 / 140
+2025-10-20T12:23:20.463Z INFO  [rustowlc::core] start borrowck of DefId(0:536 ~ chat_app[883d]::models::message::_#1::{impl#0}::deserialize::{impl#0}::expecting)
+2025-10-20T12:23:20.463Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:20.464Z INFO  [rustowlc::core::analyze] facts of DefId(0:536 ~ chat_app[883d]::models::message::_#1::{impl#0}::deserialize::{impl#0}::expecting) prepared; start analyze of DefId(0:536 ~ chat_app[883d]::models::message::_#1::{impl#0}::deserialize::{impl#0}::expecting)
+2025-10-20T12:23:20.464Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:20.464Z INFO  [rustowlc::core] borrow checked: 114 / 140
+2025-10-20T12:23:20.465Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:20.465Z INFO  [rustowlc::core] start borrowck of DefId(0:537 ~ chat_app[883d]::models::message::_#1::{impl#0}::deserialize::{impl#0}::visit_u64)
+2025-10-20T12:23:20.467Z INFO  [rustowlc::core::analyze] facts of DefId(0:537 ~ chat_app[883d]::models::message::_#1::{impl#0}::deserialize::{impl#0}::visit_u64) prepared; start analyze of DefId(0:537 ~ chat_app[883d]::models::message::_#1::{impl#0}::deserialize::{impl#0}::visit_u64)
+2025-10-20T12:23:20.467Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:20.467Z INFO  [rustowlc::core] borrow checked: 115 / 140
+2025-10-20T12:23:20.468Z INFO  [rustowlc::core] start borrowck of DefId(0:539 ~ chat_app[883d]::models::message::_#1::{impl#0}::deserialize::{impl#0}::visit_str)
+2025-10-20T12:23:20.468Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:20.470Z INFO  [rustowlc::core::analyze] facts of DefId(0:539 ~ chat_app[883d]::models::message::_#1::{impl#0}::deserialize::{impl#0}::visit_str) prepared; start analyze of DefId(0:539 ~ chat_app[883d]::models::message::_#1::{impl#0}::deserialize::{impl#0}::visit_str)
+2025-10-20T12:23:20.472Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:20.472Z INFO  [rustowlc::core] borrow checked: 116 / 140
+2025-10-20T12:23:20.473Z INFO  [rustowlc::core] start borrowck of DefId(0:541 ~ chat_app[883d]::models::message::_#1::{impl#0}::deserialize::{impl#0}::visit_bytes)
+2025-10-20T12:23:20.473Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:20.475Z INFO  [rustowlc::core::analyze] facts of DefId(0:541 ~ chat_app[883d]::models::message::_#1::{impl#0}::deserialize::{impl#0}::visit_bytes) prepared; start analyze of DefId(0:541 ~ chat_app[883d]::models::message::_#1::{impl#0}::deserialize::{impl#0}::visit_bytes)
+2025-10-20T12:23:20.476Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:20.476Z INFO  [rustowlc::core] borrow checked: 117 / 140
+2025-10-20T12:23:20.476Z INFO  [rustowlc::core] start borrowck of DefId(0:545 ~ chat_app[883d]::models::message::_#1::{impl#0}::deserialize::{impl#1}::deserialize)
+2025-10-20T12:23:20.477Z INFO  [rustowlc::core::analyze] facts of DefId(0:545 ~ chat_app[883d]::models::message::_#1::{impl#0}::deserialize::{impl#1}::deserialize) prepared; start analyze of DefId(0:545 ~ chat_app[883d]::models::message::_#1::{impl#0}::deserialize::{impl#1}::deserialize)
+2025-10-20T12:23:20.477Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:20.477Z INFO  [rustowlc::core] borrow checked: 118 / 140
+2025-10-20T12:23:20.478Z INFO  [rustowlc::core] start borrowck of DefId(0:554 ~ chat_app[883d]::models::message::_#1::{impl#0}::deserialize::{impl#2}::expecting)
+2025-10-20T12:23:20.478Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:20.479Z INFO  [rustowlc::core::analyze] facts of DefId(0:554 ~ chat_app[883d]::models::message::_#1::{impl#0}::deserialize::{impl#2}::expecting) prepared; start analyze of DefId(0:554 ~ chat_app[883d]::models::message::_#1::{impl#0}::deserialize::{impl#2}::expecting)
+2025-10-20T12:23:20.479Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:20.479Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:20.479Z INFO  [rustowlc::core] borrow checked: 119 / 140
+2025-10-20T12:23:20.480Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:20.480Z INFO  [rustowlc::core] start borrowck of DefId(0:555 ~ chat_app[883d]::models::message::_#1::{impl#0}::deserialize::{impl#2}::visit_seq)
+2025-10-20T12:23:20.552Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:20.559Z INFO  [rustowlc::core::analyze] facts of DefId(0:555 ~ chat_app[883d]::models::message::_#1::{impl#0}::deserialize::{impl#2}::visit_seq) prepared; start analyze of DefId(0:555 ~ chat_app[883d]::models::message::_#1::{impl#0}::deserialize::{impl#2}::visit_seq)
+2025-10-20T12:23:20.560Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:20.560Z INFO  [rustowlc::core] borrow checked: 120 / 140
+2025-10-20T12:23:20.561Z INFO  [rustowlc::core] start borrowck of DefId(0:557 ~ chat_app[883d]::models::message::_#1::{impl#0}::deserialize::{impl#2}::visit_map)
+2025-10-20T12:23:20.623Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:20.650Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:20.681Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:20.739Z INFO  [rustowlc::core::analyze] facts of DefId(0:557 ~ chat_app[883d]::models::message::_#1::{impl#0}::deserialize::{impl#2}::visit_map) prepared; start analyze of DefId(0:557 ~ chat_app[883d]::models::message::_#1::{impl#0}::deserialize::{impl#2}::visit_map)
+2025-10-20T12:23:20.740Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:20.740Z INFO  [rustowlc::core] borrow checked: 121 / 140
+2025-10-20T12:23:20.741Z INFO  [rustowlc::core] start borrowck of DefId(0:563 ~ chat_app[883d]::models::message::{impl#1}::from_row)
+2025-10-20T12:23:20.755Z INFO  [rustowlc::core::analyze] facts of DefId(0:563 ~ chat_app[883d]::models::message::{impl#1}::from_row) prepared; start analyze of DefId(0:563 ~ chat_app[883d]::models::message::{impl#1}::from_row)
+2025-10-20T12:23:20.756Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:20.756Z INFO  [rustowlc::core] borrow checked: 122 / 140
+2025-10-20T12:23:20.756Z INFO  [rustowlc::core] start borrowck of DefId(0:571 ~ chat_app[883d]::models::attachment::{impl#0}::fmt)
+2025-10-20T12:23:20.761Z INFO  [rustowlc::core::analyze] facts of DefId(0:571 ~ chat_app[883d]::models::attachment::{impl#0}::fmt) prepared; start analyze of DefId(0:571 ~ chat_app[883d]::models::attachment::{impl#0}::fmt)
+2025-10-20T12:23:20.761Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:20.761Z INFO  [rustowlc::core] borrow checked: 123 / 140
+2025-10-20T12:23:20.761Z INFO  [rustowlc::core] start borrowck of DefId(0:575 ~ chat_app[883d]::models::attachment::_::{impl#0}::serialize)
+2025-10-20T12:23:20.773Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:20.785Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:20.798Z INFO  [rustowlc::core::analyze] facts of DefId(0:575 ~ chat_app[883d]::models::attachment::_::{impl#0}::serialize) prepared; start analyze of DefId(0:575 ~ chat_app[883d]::models::attachment::_::{impl#0}::serialize)
+2025-10-20T12:23:20.799Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:20.799Z INFO  [rustowlc::core] borrow checked: 124 / 140
+2025-10-20T12:23:20.799Z INFO  [rustowlc::core] start borrowck of DefId(0:581 ~ chat_app[883d]::models::attachment::_#1::{impl#0}::deserialize)
+2025-10-20T12:23:20.801Z INFO  [rustowlc::core::analyze] facts of DefId(0:581 ~ chat_app[883d]::models::attachment::_#1::{impl#0}::deserialize) prepared; start analyze of DefId(0:581 ~ chat_app[883d]::models::attachment::_#1::{impl#0}::deserialize)
+2025-10-20T12:23:20.801Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:20.801Z INFO  [rustowlc::core] borrow checked: 125 / 140
+2025-10-20T12:23:20.801Z INFO  [rustowlc::core] start borrowck of DefId(0:601 ~ chat_app[883d]::models::attachment::_#1::{impl#0}::deserialize::{impl#0}::expecting)
+2025-10-20T12:23:20.802Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:20.802Z INFO  [rustowlc::core::analyze] facts of DefId(0:601 ~ chat_app[883d]::models::attachment::_#1::{impl#0}::deserialize::{impl#0}::expecting) prepared; start analyze of DefId(0:601 ~ chat_app[883d]::models::attachment::_#1::{impl#0}::deserialize::{impl#0}::expecting)
+2025-10-20T12:23:20.802Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:20.803Z INFO  [rustowlc::core] borrow checked: 126 / 140
+2025-10-20T12:23:20.803Z INFO  [rustowlc::core] start borrowck of DefId(0:602 ~ chat_app[883d]::models::attachment::_#1::{impl#0}::deserialize::{impl#0}::visit_u64)
+2025-10-20T12:23:20.803Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:20.804Z INFO  [rustowlc::core::analyze] facts of DefId(0:602 ~ chat_app[883d]::models::attachment::_#1::{impl#0}::deserialize::{impl#0}::visit_u64) prepared; start analyze of DefId(0:602 ~ chat_app[883d]::models::attachment::_#1::{impl#0}::deserialize::{impl#0}::visit_u64)
+2025-10-20T12:23:20.804Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:20.804Z INFO  [rustowlc::core] borrow checked: 127 / 140
+2025-10-20T12:23:20.805Z INFO  [rustowlc::core] start borrowck of DefId(0:604 ~ chat_app[883d]::models::attachment::_#1::{impl#0}::deserialize::{impl#0}::visit_str)
+2025-10-20T12:23:20.805Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:20.806Z INFO  [rustowlc::core::analyze] facts of DefId(0:604 ~ chat_app[883d]::models::attachment::_#1::{impl#0}::deserialize::{impl#0}::visit_str) prepared; start analyze of DefId(0:604 ~ chat_app[883d]::models::attachment::_#1::{impl#0}::deserialize::{impl#0}::visit_str)
+2025-10-20T12:23:20.807Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:20.807Z INFO  [rustowlc::core] borrow checked: 128 / 140
+2025-10-20T12:23:20.807Z INFO  [rustowlc::core] start borrowck of DefId(0:606 ~ chat_app[883d]::models::attachment::_#1::{impl#0}::deserialize::{impl#0}::visit_bytes)
+2025-10-20T12:23:20.809Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:20.810Z INFO  [rustowlc::core::analyze] facts of DefId(0:606 ~ chat_app[883d]::models::attachment::_#1::{impl#0}::deserialize::{impl#0}::visit_bytes) prepared; start analyze of DefId(0:606 ~ chat_app[883d]::models::attachment::_#1::{impl#0}::deserialize::{impl#0}::visit_bytes)
+2025-10-20T12:23:20.810Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:20.810Z INFO  [rustowlc::core] borrow checked: 129 / 140
+2025-10-20T12:23:20.811Z INFO  [rustowlc::core] start borrowck of DefId(0:610 ~ chat_app[883d]::models::attachment::_#1::{impl#0}::deserialize::{impl#1}::deserialize)
+2025-10-20T12:23:20.812Z INFO  [rustowlc::core::analyze] facts of DefId(0:610 ~ chat_app[883d]::models::attachment::_#1::{impl#0}::deserialize::{impl#1}::deserialize) prepared; start analyze of DefId(0:610 ~ chat_app[883d]::models::attachment::_#1::{impl#0}::deserialize::{impl#1}::deserialize)
+2025-10-20T12:23:20.812Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:20.812Z INFO  [rustowlc::core] borrow checked: 130 / 140
+2025-10-20T12:23:20.812Z INFO  [rustowlc::core] start borrowck of DefId(0:619 ~ chat_app[883d]::models::attachment::_#1::{impl#0}::deserialize::{impl#2}::expecting)
+2025-10-20T12:23:20.812Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:20.813Z INFO  [rustowlc::core::analyze] facts of DefId(0:619 ~ chat_app[883d]::models::attachment::_#1::{impl#0}::deserialize::{impl#2}::expecting) prepared; start analyze of DefId(0:619 ~ chat_app[883d]::models::attachment::_#1::{impl#0}::deserialize::{impl#2}::expecting)
+2025-10-20T12:23:20.813Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:20.813Z INFO  [rustowlc::core] borrow checked: 131 / 140
+2025-10-20T12:23:20.813Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:20.814Z INFO  [rustowlc::core] start borrowck of DefId(0:620 ~ chat_app[883d]::models::attachment::_#1::{impl#0}::deserialize::{impl#2}::visit_seq)
+2025-10-20T12:23:20.814Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:20.869Z INFO  [rustowlc::core::analyze] facts of DefId(0:620 ~ chat_app[883d]::models::attachment::_#1::{impl#0}::deserialize::{impl#2}::visit_seq) prepared; start analyze of DefId(0:620 ~ chat_app[883d]::models::attachment::_#1::{impl#0}::deserialize::{impl#2}::visit_seq)
+2025-10-20T12:23:20.870Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:20.870Z INFO  [rustowlc::core] borrow checked: 132 / 140
+2025-10-20T12:23:20.872Z INFO  [rustowlc::core] start borrowck of DefId(0:622 ~ chat_app[883d]::models::attachment::_#1::{impl#0}::deserialize::{impl#2}::visit_map)
+2025-10-20T12:23:20.893Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:20.983Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:21.037Z INFO  [rustowlc::core::analyze] facts of DefId(0:622 ~ chat_app[883d]::models::attachment::_#1::{impl#0}::deserialize::{impl#2}::visit_map) prepared; start analyze of DefId(0:622 ~ chat_app[883d]::models::attachment::_#1::{impl#0}::deserialize::{impl#2}::visit_map)
+2025-10-20T12:23:21.039Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:21.039Z INFO  [rustowlc::core] borrow checked: 133 / 140
+2025-10-20T12:23:21.039Z INFO  [rustowlc::core] start borrowck of DefId(0:628 ~ chat_app[883d]::models::attachment::{impl#1}::from_row)
+2025-10-20T12:23:21.057Z INFO  [rustowlc::core::analyze] facts of DefId(0:628 ~ chat_app[883d]::models::attachment::{impl#1}::from_row) prepared; start analyze of DefId(0:628 ~ chat_app[883d]::models::attachment::{impl#1}::from_row)
+2025-10-20T12:23:21.058Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:21.058Z INFO  [rustowlc::core] borrow checked: 134 / 140
+2025-10-20T12:23:21.059Z INFO  [rustowlc::core] start borrowck of DefId(0:115 ~ chat_app[883d]::routes::user_routes::routes)
+2025-10-20T12:23:21.072Z INFO  [rustowlc::core::analyze] facts of DefId(0:115 ~ chat_app[883d]::routes::user_routes::routes) prepared; start analyze of DefId(0:115 ~ chat_app[883d]::routes::user_routes::routes)
+2025-10-20T12:23:21.072Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:21.073Z INFO  [rustowlc::core] borrow checked: 135 / 140
+2025-10-20T12:23:21.074Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:21.085Z INFO  [rustowlc::core] start borrowck of DefId(0:120 ~ chat_app[883d]::routes::create_routes)
+2025-10-20T12:23:21.086Z INFO  [rustowlc::core::analyze] facts of DefId(0:120 ~ chat_app[883d]::routes::create_routes) prepared; start analyze of DefId(0:120 ~ chat_app[883d]::routes::create_routes)
+2025-10-20T12:23:21.087Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:21.087Z INFO  [rustowlc::core] borrow checked: 136 / 140
+2025-10-20T12:23:21.088Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:21.089Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:21.091Z INFO  [rustowlc::core] start borrowck of DefId(0:629 ~ chat_app[883d]::main)
+2025-10-20T12:23:21.091Z INFO  [rustowlc::core] start borrowck of DefId(0:630 ~ chat_app[883d]::main::{closure#0})
+2025-10-20T12:23:21.093Z INFO  [rustowlc::core] start borrowck of DefId(0:633 ~ chat_app[883d]::main::{closure#0}::{closure#0})
+2025-10-20T12:23:21.099Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:21.106Z INFO  [rustowlc::core::analyze] facts of DefId(0:633 ~ chat_app[883d]::main::{closure#0}::{closure#0}) prepared; start analyze of DefId(0:633 ~ chat_app[883d]::main::{closure#0}::{closure#0})
+2025-10-20T12:23:21.151Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:21.151Z INFO  [rustowlc::core] borrow checked: 137 / 140
+2025-10-20T12:23:21.173Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:21.399Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:21.455Z INFO  [rustowlc::core::analyze] facts of DefId(0:630 ~ chat_app[883d]::main::{closure#0}) prepared; start analyze of DefId(0:630 ~ chat_app[883d]::main::{closure#0})
+2025-10-20T12:23:21.457Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:21.457Z INFO  [rustowlc::core] borrow checked: 138 / 140
+2025-10-20T12:23:21.459Z INFO  [rustowlc::core::analyze] facts of DefId(0:629 ~ chat_app[883d]::main) prepared; start analyze of DefId(0:629 ~ chat_app[883d]::main)
+2025-10-20T12:23:21.459Z INFO  [rustowlc::core] borrow checked: 139 / 140
+2025-10-20T12:23:21.460Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:21.460Z INFO  [rustowlc::core] start borrowck of DefId(0:645 ~ chat_app[883d]::main#1)
+2025-10-20T12:23:21.461Z INFO  [rustowlc::core::analyze] facts of DefId(0:645 ~ chat_app[883d]::main#1) prepared; start analyze of DefId(0:645 ~ chat_app[883d]::main#1)
+2025-10-20T12:23:21.461Z INFO  [rustowlc::core::analyze] start re-computing borrow check with dump: true
+2025-10-20T12:23:21.461Z INFO  [rustowlc::core] borrow checked: 140 / 140
+2025-10-20T12:23:21.461Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:21.461Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:21.473Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\db.rs
+2025-10-20T12:23:21.482Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\db.rs
+2025-10-20T12:23:21.988Z INFO  [rustowlc::core] analyzed one item of C:\Users\yeabt\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tracing-0.1.41\src\macros.rs
+2025-10-20T12:23:21.988Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\handlers\user_handler.rs
+2025-10-20T12:23:22.026Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:22.402Z INFO  [rustowlc::core] analyzed one item of C:\Users\yeabt\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tracing-0.1.41\src\macros.rs
+2025-10-20T12:23:22.877Z INFO  [rustowlc::core] analyzed one item of C:\Users\yeabt\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tracing-0.1.41\src\macros.rs
+2025-10-20T12:23:23.244Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\handlers\user_handler.rs
+2025-10-20T12:23:23.245Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\handlers\user_handler.rs
+2025-10-20T12:23:23.678Z INFO  [rustowlc::core] analyzed one item of C:\Users\yeabt\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tracing-0.1.41\src\macros.rs
+2025-10-20T12:23:24.121Z INFO  [rustowlc::core] analyzed one item of C:\Users\yeabt\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tracing-0.1.41\src\macros.rs
+2025-10-20T12:23:24.653Z INFO  [rustowlc::core] analyzed one item of C:\Users\yeabt\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tracing-0.1.41\src\macros.rs
+2025-10-20T12:23:25.126Z INFO  [rustowlc::core] analyzed one item of C:\Users\yeabt\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tracing-0.1.41\src\macros.rs
+2025-10-20T12:23:25.136Z INFO  [rustowlc::core::analyze] borrow check finished
+2025-10-20T12:23:26.021Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\handlers\user_handler.rs
+2025-10-20T12:23:26.022Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\handlers\user_handler.rs
+2025-10-20T12:23:26.023Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\repository\user_repository.rs
+2025-10-20T12:23:26.023Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\repository\user_repository.rs
+2025-10-20T12:23:26.024Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\repository\user_repository.rs
+2025-10-20T12:23:26.031Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\repository\user_repository.rs
+2025-10-20T12:23:26.038Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\repository\user_repository.rs
+2025-10-20T12:23:26.048Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\repository\user_repository.rs
+2025-10-20T12:23:26.049Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\handlers\user_handler.rs
+2025-10-20T12:23:26.049Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\handlers\user_handler.rs
+2025-10-20T12:23:26.049Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\handlers\user_handler.rs
+2025-10-20T12:23:26.049Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\handlers\user_handler.rs
+2025-10-20T12:23:26.049Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\handlers\user_handler.rs
+2025-10-20T12:23:26.050Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\handlers\user_handler.rs
+2025-10-20T12:23:26.050Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\handlers\user_handler.rs
+2025-10-20T12:23:26.050Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\handlers\user_handler.rs
+2025-10-20T12:23:26.057Z INFO  [rustowlc::core] analyzed one item of C:\Users\yeabt\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tracing-0.1.41\src\macros.rs
+2025-10-20T12:23:26.227Z INFO  [rustowlc::core] analyzed one item of C:\Users\yeabt\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tracing-0.1.41\src\macros.rs
+2025-10-20T12:23:26.235Z INFO  [rustowlc::core] analyzed one item of C:\Users\yeabt\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tracing-0.1.41\src\macros.rs
+2025-10-20T12:23:26.371Z INFO  [rustowlc::core] analyzed one item of C:\Users\yeabt\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tracing-0.1.41\src\macros.rs
+2025-10-20T12:23:26.375Z INFO  [rustowlc::core] analyzed one item of C:\Users\yeabt\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tracing-0.1.41\src\macros.rs
+2025-10-20T12:23:26.511Z INFO  [rustowlc::core] analyzed one item of C:\Users\yeabt\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tracing-0.1.41\src\macros.rs
+2025-10-20T12:23:26.515Z INFO  [rustowlc::core] analyzed one item of C:\Users\yeabt\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tracing-0.1.41\src\macros.rs
+2025-10-20T12:23:26.662Z INFO  [rustowlc::core] analyzed one item of C:\Users\yeabt\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tracing-0.1.41\src\macros.rs
+2025-10-20T12:23:26.671Z INFO  [rustowlc::core] analyzed one item of C:\Users\yeabt\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tracing-0.1.41\src\macros.rs
+2025-10-20T12:23:26.813Z INFO  [rustowlc::core] analyzed one item of C:\Users\yeabt\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tracing-0.1.41\src\macros.rs
+2025-10-20T12:23:26.818Z INFO  [rustowlc::core] analyzed one item of C:\Users\yeabt\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tracing-0.1.41\src\macros.rs
+2025-10-20T12:23:26.951Z INFO  [rustowlc::core] analyzed one item of C:\Users\yeabt\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tracing-0.1.41\src\macros.rs
+2025-10-20T12:23:26.959Z INFO  [rustowlc::core] analyzed one item of C:\Users\yeabt\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tracing-0.1.41\src\macros.rs
+2025-10-20T12:23:26.959Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\user.rs
+2025-10-20T12:23:26.959Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\user.rs
+2025-10-20T12:23:26.959Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\user.rs
+2025-10-20T12:23:27.096Z INFO  [rustowlc::core] analyzed one item of C:\Users\yeabt\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tracing-0.1.41\src\macros.rs
+2025-10-20T12:23:27.096Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\room.rs
+2025-10-20T12:23:27.096Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\room.rs
+2025-10-20T12:23:27.097Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\room.rs
+2025-10-20T12:23:27.097Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\message.rs
+2025-10-20T12:23:27.097Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\message.rs
+2025-10-20T12:23:27.097Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\message.rs
+2025-10-20T12:23:27.097Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\attachment.rs
+2025-10-20T12:23:27.097Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\attachment.rs
+2025-10-20T12:23:27.097Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\attachment.rs
+2025-10-20T12:23:27.102Z INFO  [rustowlc::core] analyzed one item of C:\Users\yeabt\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tracing-0.1.41\src\macros.rs
+2025-10-20T12:23:27.237Z INFO  [rustowlc::core] analyzed one item of C:\Users\yeabt\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tracing-0.1.41\src\macros.rs
+2025-10-20T12:23:27.239Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\handlers\user_handler.rs
+2025-10-20T12:23:27.239Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\handlers\user_handler.rs
+2025-10-20T12:23:27.240Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\handlers\user_handler.rs
+2025-10-20T12:23:27.241Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\handlers\user_handler.rs
+2025-10-20T12:23:27.241Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\handlers\user_handler.rs
+2025-10-20T12:23:27.243Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\handlers\user_handler.rs
+2025-10-20T12:23:27.244Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\handlers\user_handler.rs
+2025-10-20T12:23:27.283Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\handlers\user_handler.rs
+2025-10-20T12:23:27.284Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\handlers\user_handler.rs
+2025-10-20T12:23:27.285Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\handlers\user_handler.rs
+2025-10-20T12:23:27.286Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\handlers\user_handler.rs
+2025-10-20T12:23:27.287Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\handlers\user_handler.rs
+2025-10-20T12:23:27.289Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\handlers\user_handler.rs
+2025-10-20T12:23:27.290Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\handlers\user_handler.rs
+2025-10-20T12:23:27.291Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\handlers\user_handler.rs
+2025-10-20T12:23:27.310Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\handlers\user_handler.rs
+2025-10-20T12:23:27.319Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\handlers\user_handler.rs
+2025-10-20T12:23:27.320Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\handlers\user_handler.rs
+2025-10-20T12:23:27.321Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\handlers\user_handler.rs
+2025-10-20T12:23:27.322Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\handlers\user_handler.rs
+2025-10-20T12:23:27.323Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\handlers\user_handler.rs
+2025-10-20T12:23:27.324Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\handlers\user_handler.rs
+2025-10-20T12:23:27.325Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\handlers\user_handler.rs
+2025-10-20T12:23:27.326Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\handlers\user_handler.rs
+2025-10-20T12:23:27.341Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\handlers\user_handler.rs
+2025-10-20T12:23:27.361Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\handlers\user_handler.rs
+2025-10-20T12:23:27.428Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\handlers\user_handler.rs
+2025-10-20T12:23:27.560Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\handlers\user_handler.rs
+2025-10-20T12:23:27.564Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\user.rs
+2025-10-20T12:23:27.565Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\user.rs
+2025-10-20T12:23:27.565Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\user.rs
+2025-10-20T12:23:27.565Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\user.rs
+2025-10-20T12:23:27.566Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\user.rs
+2025-10-20T12:23:27.566Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\user.rs
+2025-10-20T12:23:27.566Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\user.rs
+2025-10-20T12:23:27.567Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\user.rs
+2025-10-20T12:23:27.641Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\handlers\user_handler.rs
+2025-10-20T12:23:27.652Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\user.rs
+2025-10-20T12:23:27.672Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\user.rs
+2025-10-20T12:23:27.676Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\room.rs
+2025-10-20T12:23:27.683Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\user.rs
+2025-10-20T12:23:27.684Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\room.rs
+2025-10-20T12:23:27.684Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\room.rs
+2025-10-20T12:23:27.684Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\room.rs
+2025-10-20T12:23:27.685Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\room.rs
+2025-10-20T12:23:27.686Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\room.rs
+2025-10-20T12:23:27.686Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\room.rs
+2025-10-20T12:23:27.687Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\room.rs
+2025-10-20T12:23:27.696Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\room.rs
+2025-10-20T12:23:27.706Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\room.rs
+2025-10-20T12:23:27.712Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\message.rs
+2025-10-20T12:23:27.714Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\room.rs
+2025-10-20T12:23:27.715Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\message.rs
+2025-10-20T12:23:27.715Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\message.rs
+2025-10-20T12:23:27.715Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\message.rs
+2025-10-20T12:23:27.715Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\message.rs
+2025-10-20T12:23:27.715Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\message.rs
+2025-10-20T12:23:27.716Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\message.rs
+2025-10-20T12:23:27.716Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\message.rs
+2025-10-20T12:23:27.722Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\message.rs
+2025-10-20T12:23:27.766Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\user.rs
+2025-10-20T12:23:27.800Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\room.rs
+2025-10-20T12:23:27.814Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\message.rs
+2025-10-20T12:23:27.818Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\attachment.rs
+2025-10-20T12:23:27.822Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\message.rs
+2025-10-20T12:23:27.822Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\attachment.rs
+2025-10-20T12:23:27.823Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\attachment.rs
+2025-10-20T12:23:27.823Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\attachment.rs
+2025-10-20T12:23:27.824Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\attachment.rs
+2025-10-20T12:23:27.824Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\attachment.rs
+2025-10-20T12:23:27.824Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\attachment.rs
+2025-10-20T12:23:27.825Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\attachment.rs
+2025-10-20T12:23:27.837Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\attachment.rs
+2025-10-20T12:23:27.840Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\routes\user_routes.rs
+2025-10-20T12:23:27.841Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\routes\mod.rs
+2025-10-20T12:23:27.844Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\attachment.rs
+2025-10-20T12:23:27.875Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\message.rs
+2025-10-20T12:23:28.296Z INFO  [rustowlc::core] analyzed one item of C:\Users\yeabt\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tracing-0.1.41\src\macros.rs
+2025-10-20T12:23:28.330Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\attachment.rs
+2025-10-20T12:23:28.330Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\main.rs
+2025-10-20T12:23:28.331Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\main.rs
+2025-10-20T12:23:28.396Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\main.rs
+2025-10-20T12:23:30.496Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\handlers\user_handler.rs
+2025-10-20T12:23:30.506Z INFO  [rustowlc::core] analyzed one item of c:\Users\yeabt\Desktop\chat_app\src\models\attachment.rs
+{"$message_type":"diagnostic","message":"5 warnings emitted","code":null,"level":"warning","spans":[],"children":[],"rendered":"\u001b[0m\u001b[1m\u001b[38;5;11mwarning\u001b[0m\u001b[0m\u001b[1m\u001b[38;5;15m: 5 warnings emitted\u001b[0m\n\n"}

@@ -1,0 +1,19 @@
+[package]
+name = "chat_app"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+axum = "0.8"
+tokio = { version = "1" , features = ["full"]}
+serde = { version = "1.0" , features = ["derive"]}
+serde_json = "1.0"
+uuid = { version = "1", features = ["v4", "serde"] }   # UUIDs for users/rooms
+sqlx = { version = "0.7", features = ["runtime-tokio-rustls", "postgres", "uuid", "chrono", "macros"] } 
+chrono = { version = "0.4", features = ["serde"] }          # Date/time (timestamps)
+dotenvy = "0.15"        # Load env variables
+tower = "0.4"           # Middleware for Axum
+tracing = "0.1"         # Logging
+tracing-subscriber = "0.3"
+bcrypt = "0.15"
+jsonwebtoken = "9"   # for JWT creation & verification
