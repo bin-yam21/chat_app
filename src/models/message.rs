@@ -1,11 +1,13 @@
-use chrono::NaiveDateTime;
-use serde::{Deserialize, Serialize};
 
-#[derive(Debug, Serialize, Deserialize, sqlx::FromRow)]
+use chrono::{DateTime , Utc};
+use serde::{Deserialize, Serialize};
+use uuid::Uuid;
+
+#[derive(Debug, Serialize, Deserialize, sqlx::FromRow , Clone)]
 pub struct Message {
-    pub id: i32,     // SERIAL
-    pub room_id: i32,
-    pub user_id: i32,
-    pub content: String,         // not null in your init.sql
-    pub created_at: NaiveDateTime,
+    pub id: Uuid,     // SERIAL
+    pub room_id: Uuid,
+    pub user_id: Uuid,
+    pub content: Option<String>,         // it can be null when only attachment sent
+    pub created_at: DateTime<Utc>,
 }

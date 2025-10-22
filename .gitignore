@@ -1,3 +1,5 @@
 # .gitignore
 NUL.long-type-*.txt
 .env
+# Rust build artifacts
+/target

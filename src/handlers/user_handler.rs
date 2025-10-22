@@ -1,5 +1,5 @@
 use axum::{
-    extract::{Extension, Json},
+    extract::{Extension, Json , State , Path},
     http::StatusCode,
     response::IntoResponse,
 };
@@ -8,6 +8,7 @@ use serde::{Deserialize, Serialize};
 use sqlx::{Pool, Postgres};
 use jsonwebtoken::{encode, Header, EncodingKey};
 use chrono::{Utc, Duration};
+
 use std::env;
 
 use crate::repository::UserRepository;
@@ -37,12 +38,25 @@ struct Claims {
     exp: usize,  // expiration timestamp
 }
 
-pub async fn get_users(Extension(pool): Extension<Pool<Postgres>>) -> impl IntoResponse {
+pub async fn get_users(State(pool): State<Pool<Postgres>>) -> impl IntoResponse {
     match UserRepository::get_all(&pool).await {
         Ok(users) => (StatusCode::OK, Json(users)).into_response(),
         Err(err) => {
             tracing::error!("failed to get users: {}", err);
             (StatusCode::INTERNAL_SERVER_ERROR, "Failed to fetch users").into_response()
+        }
+    }
+}
+
+pub  async fn get_user(State(pool): State<Pool<Postgres>>,
+ Path(username): Path<String>,
+) -> impl IntoResponse {
+    match UserRepository::find_by_username(&pool, &username).await {
+        Ok(Some(user)) => (StatusCode::OK, Json(user)).into_response(),
+        Ok(None) => (StatusCode::NOT_FOUND, Json("User not found")).into_response(),
+        Err(err) => {
+            tracing::error!("failed to get the user: {}" , err);
+            (StatusCode::INTERNAL_SERVER_ERROR, "failed to fetch the user").into_response()
         }
     }
 }

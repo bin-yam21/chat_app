@@ -1,10 +1,11 @@
-use chrono::NaiveDateTime;
+use chrono::{DateTime, Utc};
 use serde::{Deserialize, Serialize};
+use uuid::Uuid;
 
 #[derive(Debug, Serialize, Deserialize, sqlx::FromRow)]
 pub struct Room {
-    pub id: i32,                 // SERIAL
+    pub id: Uuid,                 // SERIAL
     pub name: String,
-    pub description: Option<String>,
-    pub created_at: NaiveDateTime,
+    pub created_by: Option<Uuid>,
+    pub created_at: DateTime<Utc>,
 }
