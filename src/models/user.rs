@@ -8,5 +8,6 @@ pub struct User {
     pub username: String,
     pub email: Option<String>,   // ✅ matches `email TEXT UNIQUE` (nullable by default)
     pub password_hash: String,
-    pub created_at: DateTime<Utc>
+    pub created_at: DateTime<Utc>,
+    pub role: String,
 }

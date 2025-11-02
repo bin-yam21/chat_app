@@ -12,9 +12,9 @@ impl UserRepository {
     ) -> Result<User, sqlx::Error> {
         sqlx::query_as::<_, User>(
             r#"
-            INSERT INTO users (username, email, password_hash)
-            VALUES ($1, $2, $3)
-            RETURNING id, username, email, password_hash, created_at
+            INSERT INTO users (username, email, password_hash, role)
+            VALUES ($1, $2, $3, 'user')
+            RETURNING id, username, email, password_hash, created_at, role
             "#
         )
         .bind(username)
@@ -30,7 +30,7 @@ impl UserRepository {
     ) -> Result<Option<User>, sqlx::Error> {
         sqlx::query_as::<_, User>(
             r#"
-            SELECT * FROM users WHERE username = $1
+            SELECT id, username, email, password_hash, created_at, role FROM users WHERE username = $1
             "#
         )
         .bind(username)
@@ -42,7 +42,7 @@ impl UserRepository {
         pool: &Pool<Postgres>,
     ) -> Result<Vec<User>, sqlx::Error> {
         sqlx::query_as::<_, User>(
-            r#"SELECT * FROM users ORDER BY created_at DESC"#
+            r#"SELECT id, username, email, password_hash, created_at, role FROM users ORDER BY created_at DESC"#
         )
         .fetch_all(pool)
         .await

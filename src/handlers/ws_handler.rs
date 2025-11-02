@@ -12,7 +12,7 @@ use tokio::sync::broadcast;
 use uuid::Uuid;
 
 use crate::repository::message_repository::MessageRepository;
-use crate::models::message::Message as ChatMessage; // your message model
+use crate::models::message::Message as ChatMessage; //  message model
 
 /// Shared app state used by all WebSocket connections
 #[derive(Clone)]
@@ -36,7 +36,7 @@ async fn handle_socket(socket: WebSocket, state: Arc<ChatState>, room_id: Uuid) 
     println!("🔌 Client connected to room: {}", room_id);
 
     // Each client subscribes to the broadcast channel
-    let mut rx = state.tx.subscribe();
+    let  rx = state.tx.subscribe();
 
     // Split the socket into sender (for sending messages) and receiver (for receiving messages)
     let (mut sender, mut receiver) = socket.split();

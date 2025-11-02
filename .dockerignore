@@ -1,0 +1,16 @@
+# 🧱 Ignore build artifacts
+target/
+**/target/
+
+# ⚙️ Ignore cargo incremental and registry cache if present locally
+.cargo/
+.cargo-target/
+# 🧾 Ignore logs, temporary, and editor files
+*.log
+*.tmp
+*.swp
+*.bak
+*.old
+*.orig
+# Ignore weird Windows-generated NUL.* files
+NUL.*
