@@ -1,15 +1,27 @@
 use axum::{
     extract::{
         ws::{Message, WebSocket, WebSocketUpgrade},
-        Path, State,
+        Path, Query, State,
     },
-    response::IntoResponse,
+    http::StatusCode,
+    response::{IntoResponse, Response},
 };
 use futures::{SinkExt, StreamExt};
+use jsonwebtoken::{decode, Algorithm, DecodingKey, Validation};
 use sqlx::{Pool, Postgres};
+use std::env;
 use std::sync::Arc;
 use tokio::sync::broadcast;
 use uuid::Uuid;
+
+use crate::auth::Claims;
+
+/// JWT passed as a query param. Browsers cannot set an `Authorization`
+/// header on the WebSocket handshake, so the token comes through the URL.
+#[derive(serde::Deserialize)]
+pub struct WsAuth {
+    pub token: String,
+}
 
 use crate::repository::message_repository::MessageRepository;
 use crate::models::message::Message as ChatMessage; //  message model
@@ -26,9 +38,23 @@ pub struct ChatState {
 pub async fn ws_handler(
     ws: WebSocketUpgrade,
     Path(room_id): Path<Uuid>,
+    Query(auth): Query<WsAuth>,
     State(state): State<Arc<ChatState>>,
-) -> impl IntoResponse {
+) -> Response {
+    // Validate the JWT from the query param before upgrading the connection.
+    let secret = env::var("JWT_SECRET").unwrap_or_else(|_| "secret".to_string());
+    if decode::<Claims>(
+        &auth.token,
+        &DecodingKey::from_secret(secret.as_ref()),
+        &Validation::new(Algorithm::HS256),
+    )
+    .is_err()
+    {
+        return (StatusCode::UNAUTHORIZED, "Invalid or missing token").into_response();
+    }
+
     ws.on_upgrade(move |socket| handle_socket(socket, state, room_id))
+        .into_response()
 }
 
 /// Handle a single WebSocket connection.

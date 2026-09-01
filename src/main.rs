@@ -8,7 +8,9 @@ mod routes;
 
 use axum::{
     Router,
-    routing::get_service,
+    routing::{get, get_service},
+    response::{Html, IntoResponse},
+    http::header,
 };
 use axum::http::Method;
 // axum::response::IntoResponse is not needed here
@@ -36,6 +38,9 @@ async fn main() {
         .allow_credentials(false);
 
     let app: Router = routes(pool)
+        // Interactive API documentation (Swagger UI + OpenAPI spec)
+        .route("/docs", get(docs_html))
+        .route("/openapi.json", get(openapi_spec))
         .nest_service("/uploads", get_service(ServeDir::new("uploads")).handle_error(|error| async move {
             (
                 axum::http::StatusCode::INTERNAL_SERVER_ERROR,
@@ -53,4 +58,17 @@ async fn main() {
 
     // Serve the app directly without into_make_service()
     axum::serve(listener, app).await.unwrap();
+}
+
+/// Swagger UI page (loads the OpenAPI spec from `/openapi.json`).
+async fn docs_html() -> Html<&'static str> {
+    Html(include_str!("../docs.html"))
+}
+
+/// The OpenAPI 3.0 specification describing the whole API.
+async fn openapi_spec() -> impl IntoResponse {
+    (
+        [(header::CONTENT_TYPE, "application/json")],
+        include_str!("../openapi.json"),
+    )
 }
