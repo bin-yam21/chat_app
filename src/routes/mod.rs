@@ -20,8 +20,10 @@ pub fn create_routes(pool: Pool<Postgres>) -> Router {
     let protected_rooms = room_routes::room_routes(pool.clone()).route_layer(from_fn(require_auth));
     let protected_attachments = attachment_routes::attachment_routes(pool.clone()).route_layer(from_fn(require_auth));
 
-    // WebSocket router lives on its own state type (Arc<ChatState>) — apply auth middleware as well
-    let protected_ws = ws_routes::ws_routes(pool.clone()).route_layer(from_fn(require_auth));
+    // WebSocket router authenticates via a `?token=` query param inside the
+    // handler (browsers can't set Authorization headers on WS handshakes),
+    // so no header middleware is applied here.
+    let protected_ws = ws_routes::ws_routes(pool.clone());
 
     // Merge public and protected routers
     let v1_routes = Router::new()

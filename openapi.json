@@ -1,0 +1,280 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Rust Chat API",
+    "version": "1.0.0",
+    "description": "Real-time chat backend built with Rust, Axum and SQLx (PostgreSQL). JWT authentication, rooms, messages, attachments and a WebSocket endpoint for live messaging. All REST endpoints are prefixed with `/api/v1`."
+  },
+  "servers": [{ "url": "http://localhost:3000", "description": "Local development" }],
+  "tags": [
+    { "name": "Auth", "description": "Registration and login (returns a JWT)" },
+    { "name": "Users", "description": "User lookup (JWT required)" },
+    { "name": "Rooms", "description": "Chat room CRUD (JWT required)" },
+    { "name": "Messages", "description": "Room message history (JWT required)" },
+    { "name": "Attachments", "description": "Message attachments (JWT required)" },
+    { "name": "WebSocket", "description": "Real-time messaging" }
+  ],
+  "paths": {
+    "/api/v1/register": {
+      "post": {
+        "tags": ["Auth"],
+        "summary": "Register a new user",
+        "requestBody": {
+          "required": true,
+          "content": { "application/json": { "schema": { "$ref": "#/components/schemas/CreateUserPayload" } } }
+        },
+        "responses": {
+          "201": { "description": "User created", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/AuthResponse" } } } },
+          "500": { "description": "Server error" }
+        }
+      }
+    },
+    "/api/v1/login": {
+      "post": {
+        "tags": ["Auth"],
+        "summary": "Log in and receive a JWT",
+        "requestBody": {
+          "required": true,
+          "content": { "application/json": { "schema": { "$ref": "#/components/schemas/LoginPayload" } } }
+        },
+        "responses": {
+          "200": { "description": "Authenticated", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/AuthResponse" } } } },
+          "401": { "description": "Invalid credentials" }
+        }
+      }
+    },
+    "/api/v1/users": {
+      "get": {
+        "tags": ["Users"],
+        "summary": "List all users (admin only)",
+        "security": [{ "bearerAuth": [] }],
+        "responses": {
+          "200": { "description": "A list of users", "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/User" } } } } },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden — admin role required" }
+        }
+      }
+    },
+    "/api/v1/users/{username}": {
+      "get": {
+        "tags": ["Users"],
+        "summary": "Get a user by username (owner or admin)",
+        "security": [{ "bearerAuth": [] }],
+        "parameters": [{ "name": "username", "in": "path", "required": true, "schema": { "type": "string" } }],
+        "responses": {
+          "200": { "description": "The user", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/User" } } } },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "User not found" }
+        }
+      }
+    },
+    "/api/v1/rooms": {
+      "get": {
+        "tags": ["Rooms"],
+        "summary": "List all rooms",
+        "security": [{ "bearerAuth": [] }],
+        "responses": {
+          "200": { "description": "A list of rooms", "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/Room" } } } } }
+        }
+      },
+      "post": {
+        "tags": ["Rooms"],
+        "summary": "Create a room",
+        "security": [{ "bearerAuth": [] }],
+        "requestBody": { "required": true, "content": { "application/json": { "schema": { "$ref": "#/components/schemas/CreateRoomRequest" } } } },
+        "responses": {
+          "201": { "description": "Room created", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Room" } } } }
+        }
+      }
+    },
+    "/api/v1/rooms/{id}": {
+      "get": {
+        "tags": ["Rooms"],
+        "summary": "Get a room by id",
+        "security": [{ "bearerAuth": [] }],
+        "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "string", "format": "uuid" } }],
+        "responses": {
+          "200": { "description": "The room", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Room" } } } },
+          "404": { "description": "Room not found" }
+        }
+      },
+      "put": {
+        "tags": ["Rooms"],
+        "summary": "Rename a room",
+        "security": [{ "bearerAuth": [] }],
+        "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "string", "format": "uuid" } }],
+        "requestBody": { "required": true, "content": { "application/json": { "schema": { "$ref": "#/components/schemas/UpdateRoomRequest" } } } },
+        "responses": { "200": { "description": "Updated room", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Room" } } } } }
+      },
+      "delete": {
+        "tags": ["Rooms"],
+        "summary": "Delete a room",
+        "security": [{ "bearerAuth": [] }],
+        "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "string", "format": "uuid" } }],
+        "responses": { "204": { "description": "Deleted" }, "404": { "description": "Room not found" } }
+      }
+    },
+    "/api/v1/rooms/{room_id}/messages": {
+      "get": {
+        "tags": ["Messages"],
+        "summary": "List messages in a room",
+        "security": [{ "bearerAuth": [] }],
+        "parameters": [{ "name": "room_id", "in": "path", "required": true, "schema": { "type": "string", "format": "uuid" } }],
+        "responses": {
+          "200": { "description": "Messages", "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/Message" } } } } }
+        }
+      },
+      "post": {
+        "tags": ["Messages"],
+        "summary": "Send a message to a room (REST; real-time uses the WebSocket)",
+        "security": [{ "bearerAuth": [] }],
+        "parameters": [{ "name": "room_id", "in": "path", "required": true, "schema": { "type": "string", "format": "uuid" } }],
+        "requestBody": { "required": true, "content": { "application/json": { "schema": { "$ref": "#/components/schemas/CreateMessageRequest" } } } },
+        "responses": { "200": { "description": "Created message", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Message" } } } } }
+      }
+    },
+    "/api/v1/ws/{room_id}": {
+      "get": {
+        "tags": ["WebSocket"],
+        "summary": "Open a real-time chat WebSocket for a room",
+        "description": "Upgrade to a WebSocket connection. Because browsers cannot set an Authorization header on the handshake, the JWT is supplied as the `token` query parameter. Send messages as `{ \"user_id\": \"<uuid>\", \"content\": \"...\" }`; the server persists them and broadcasts the saved Message object to every client in the room.",
+        "parameters": [
+          { "name": "room_id", "in": "path", "required": true, "schema": { "type": "string", "format": "uuid" } },
+          { "name": "token", "in": "query", "required": true, "schema": { "type": "string" }, "description": "JWT obtained from /login" }
+        ],
+        "responses": {
+          "101": { "description": "Switching Protocols — WebSocket established" },
+          "401": { "description": "Invalid or missing token" }
+        }
+      }
+    },
+    "/api/v1/attachments": {
+      "post": {
+        "tags": ["Attachments"],
+        "summary": "Create an attachment for a message",
+        "security": [{ "bearerAuth": [] }],
+        "requestBody": { "required": true, "content": { "application/json": { "schema": { "$ref": "#/components/schemas/CreateAttachment" } } } },
+        "responses": { "201": { "description": "Attachment created", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Attachment" } } } } }
+      }
+    },
+    "/api/v1/messages/{message_id}/attachments": {
+      "get": {
+        "tags": ["Attachments"],
+        "summary": "List attachments for a message",
+        "security": [{ "bearerAuth": [] }],
+        "parameters": [{ "name": "message_id", "in": "path", "required": true, "schema": { "type": "string", "format": "uuid" } }],
+        "responses": { "200": { "description": "Attachments", "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/Attachment" } } } } } }
+      }
+    },
+    "/api/v1/attachments/{id}": {
+      "delete": {
+        "tags": ["Attachments"],
+        "summary": "Delete an attachment",
+        "security": [{ "bearerAuth": [] }],
+        "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "string", "format": "uuid" } }],
+        "responses": { "204": { "description": "Deleted" } }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": { "type": "http", "scheme": "bearer", "bearerFormat": "JWT" }
+    },
+    "schemas": {
+      "User": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "format": "uuid" },
+          "username": { "type": "string" },
+          "email": { "type": "string", "nullable": true },
+          "created_at": { "type": "string", "format": "date-time" },
+          "role": { "type": "string", "example": "user" }
+        }
+      },
+      "Room": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "format": "uuid" },
+          "name": { "type": "string" },
+          "created_by": { "type": "string", "format": "uuid", "nullable": true },
+          "created_at": { "type": "string", "format": "date-time" }
+        }
+      },
+      "Message": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "format": "uuid" },
+          "room_id": { "type": "string", "format": "uuid" },
+          "user_id": { "type": "string", "format": "uuid" },
+          "content": { "type": "string", "nullable": true },
+          "created_at": { "type": "string", "format": "date-time" }
+        }
+      },
+      "Attachment": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "format": "uuid" },
+          "message_id": { "type": "string", "format": "uuid" },
+          "file_url": { "type": "string" },
+          "file_type": { "type": "string", "nullable": true },
+          "created_at": { "type": "string", "format": "date-time" }
+        }
+      },
+      "CreateUserPayload": {
+        "type": "object",
+        "required": ["username", "password"],
+        "properties": {
+          "username": { "type": "string", "example": "abebe" },
+          "email": { "type": "string", "nullable": true, "example": "abebe@example.com" },
+          "password": { "type": "string", "format": "password", "example": "secret123" }
+        }
+      },
+      "LoginPayload": {
+        "type": "object",
+        "required": ["username", "password"],
+        "properties": {
+          "username": { "type": "string", "example": "abebe" },
+          "password": { "type": "string", "format": "password", "example": "secret123" }
+        }
+      },
+      "AuthResponse": {
+        "type": "object",
+        "properties": {
+          "token": { "type": "string", "description": "JWT bearer token" },
+          "message": { "type": "string" },
+          "user": { "$ref": "#/components/schemas/User" }
+        }
+      },
+      "CreateRoomRequest": {
+        "type": "object",
+        "required": ["name"],
+        "properties": {
+          "name": { "type": "string", "example": "general" },
+          "created_by": { "type": "string", "format": "uuid", "nullable": true }
+        }
+      },
+      "UpdateRoomRequest": {
+        "type": "object",
+        "required": ["name"],
+        "properties": { "name": { "type": "string", "example": "random" } }
+      },
+      "CreateMessageRequest": {
+        "type": "object",
+        "required": ["user_id"],
+        "properties": {
+          "user_id": { "type": "string", "format": "uuid" },
+          "content": { "type": "string", "nullable": true, "example": "Hello, world!" }
+        }
+      },
+      "CreateAttachment": {
+        "type": "object",
+        "required": ["message_id", "file_url"],
+        "properties": {
+          "message_id": { "type": "string", "format": "uuid" },
+          "file_url": { "type": "string", "example": "/uploads/photo.png" },
+          "file_type": { "type": "string", "nullable": true, "example": "image/png" }
+        }
+      }
+    }
+  }
+}
