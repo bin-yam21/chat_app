@@ -1,0 +1,36 @@
+# Render Blueprint for the Rust Chat backend.
+#
+# Deploy: push this repo to GitHub, then in Render → "New +" → "Blueprint" and
+# point it at this repo. Render reads this file and provisions:
+#   1. a managed Postgres database, and
+#   2. the Axum backend as a Docker web service,
+# wiring DATABASE_URL from the database and generating a JWT_SECRET.
+#
+# The free Postgres plan is fine for a demo. Note free web services spin down
+# after ~15 min idle, so the first request after a pause takes ~30–60s.
+
+databases:
+  - name: chat-app-db
+    plan: free
+    databaseName: chat_app
+    # Render fills user/password automatically.
+
+services:
+  - type: web
+    name: chat-app-api
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /openapi.json
+    envVars:
+      # Internal connection string from the database above (no public egress,
+      # no extra SSL config needed).
+      - key: DATABASE_URL
+        fromDatabase:
+          name: chat-app-db
+          property: connectionString
+      # Strong secret generated once by Render and kept stable across deploys.
+      - key: JWT_SECRET
+        generateValue: true
+      # Render also injects PORT automatically; the app reads it.

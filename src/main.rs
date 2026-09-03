@@ -30,6 +30,16 @@ async fn main() {
     // Initialize PostgreSQL connection pool
     let pool = init_db().await;
 
+    // Apply database migrations on startup. Embedding them in the binary means
+    // the runtime image needs no sqlx-cli — the server brings its own schema up
+    // to date against whatever DATABASE_URL it's pointed at (e.g. Render's
+    // managed Postgres).
+    sqlx::migrate!("./migrations")
+        .run(&pool)
+        .await
+        .expect("Failed to run database migrations");
+    tracing::info!("✅ Database migrations are up to date");
+
     // Build the app router with all routes and inject DB pool as shared state
     let cors = CorsLayer::new()
         .allow_origin(Any)
@@ -49,8 +59,11 @@ async fn main() {
         }))
         .layer(cors);
 
-    // Bind TCP listener
-    let listener = tokio::net::TcpListener::bind(&"0.0.0.0:3000")
+    // Bind TCP listener. Hosting platforms like Render inject the port to
+    // listen on via $PORT, so honour it and fall back to 3000 for local dev.
+    let port = std::env::var("PORT").unwrap_or_else(|_| "3000".to_string());
+    let addr = format!("0.0.0.0:{port}");
+    let listener = tokio::net::TcpListener::bind(&addr)
         .await
         .expect("Failed to bind to address");
 

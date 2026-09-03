@@ -1,5 +1,13 @@
-const BASE = "http://localhost:3000/api/v1";
-export const WS_BASE = "ws://localhost:3000/api/v1";
+// Backend origin. Set VITE_API_URL at build time (e.g. on Vercel) to your
+// deployed Render URL like "https://chat-app-api.onrender.com". Falls back to
+// the local backend for development.
+const API_ORIGIN = (
+  import.meta.env.VITE_API_URL || "http://localhost:3000"
+).replace(/\/+$/, "");
+
+const BASE = `${API_ORIGIN}/api/v1`;
+// Derive the WebSocket URL from the same origin: https -> wss, http -> ws.
+export const WS_BASE = `${API_ORIGIN.replace(/^http/, "ws")}/api/v1`;
 
 export const getToken = () => localStorage.getItem("rc_token");
 export const getUser = () => {
